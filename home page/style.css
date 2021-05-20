@@ -84,7 +84,7 @@ body {
 	margin-right: -5px;
 	height: 31px;
 	width: 100%;
-	position: absolute;
+	position: fixed;
 	bottom: 0;
 	border-color: #b2dcd9;
 	background-color: #b2dcd9;

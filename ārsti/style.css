@@ -23,6 +23,7 @@ body {
 	margin-left: 450px;
 	margin-top: -125px;
 }
+
 .menu a {
 	float: left;
 	color: #000000;
@@ -40,7 +41,6 @@ body {
 .meklet {
 	margin-left: 1000px;
 	margin-top: -115px;
-
 }
 
 .meklēšanasAile {
@@ -64,6 +64,7 @@ body {
 .apaksa {
 	right: 5px;
 	border-style: solid;
+	margin-top: 20px;
 	margin-right: -5px;
 	height: 31px;
 	width: 100%;
@@ -83,17 +84,126 @@ body {
 	margin-left: 89%;
 }
 
-.sadarbojamies {
-	margin-top: 50px;
-	text-align: center;
-	margin-left: 650px;
-	display: flex;
-}
-
-.slimnicas {
+.Kontakti {
 	background-color: #ddd;
 }
 
+#logs2 {
+	display: none;
+	position: absolute;
+	top: 56.2%;
+	left: 50%;
+	background: rgb(255, 0, 187);
+	width: 255px;
+	margin: -320px 0 0 -160px;
+	padding: 45px;
+	box-shadow: 0 0 3px rgb(255, 0, 0);
+	margin-bottom:15px;
+	margin-right 10px;
+}
+
+.virsraksts {
+	margin-top: -35px;
+	margin-left: 50px;
+}
+
+#ArstaBilde {
+	margin-top: 10px;
+	
+}
+#poga {
+	margin-left: 60px;
+	margin-top: 20px;
+}
+
+#arstavards{
+	width: 250px;
+	text-align: center;
+}
+
+#arstaprofesija{
+	width: 250px;
+	margin-top: 5px;
+	text-align: center;
+}
+
+p {
+	margin-bottom: -10px;
+}
+
+input[type=time]{
+	margin-left:px
+}
+
+#Pirmdienas{
+	margin-left: 10px;
+}
+#otradienas{
+	margin-left: 15px;
+}
+#tresdienas{
+	margin-left: 16.1px;
+}
+#ceturdienas{
+	margin-left: 8px;
+}
+#piekdienas{
+	margin-left: 12px;
+}
+#sestdienas{
+	margin-left: 16px;
+}
+#svētdienas{
+	margin-left: 14px;
+}
+#ArstaBilde{
+	margin-top:30px;
+}
+
+.DarbaLaiks{
+	margin-top:5px;
+	margin-left: 70px;
+}
+#plus {
+	display: inline-flex;
+	flex-direction: column;
+	width: 90px;
+	margin-left: 100px;
+	margin-bottom: 100px;
+	cursor: pointer;
+}
+
+.ArstaBilde{
+	width: 210px;
+	height: 280px;
+}
+
+.pievienotArstu{
+display: inline-flex;
+flex-direction: column;
+width: 210px;
+height: auto;
+cursor: pointer;
+padding: 28px;
+margin: 22px;
+margin-top: 60px;
+}
+
+.vards{
+text-align: center;
+margin-top: -1px;
+}
+
+.Profesija{
+
+	text-align: center;
+	margin-top: -20px;
+}
+.close{
+	width: 30px;
+	margin-top:-345px;
+	margin-left:180px;
+}
 .pievienot {
 	display: inline-flex;
 	flex-direction: column;
@@ -104,58 +214,6 @@ body {
 	margin: 10px;
 }
 
-.slimnicasvirsraksts {
-	width: 300px;
-	margin-top: -2px;
-	text-align: center;
-}
-.bilde {
-	width: 300px;
-	height: 200px;
-}
-
-#plus {
-	display: inline-flex;
-	flex-direction: column;
-	width: 90px;
-	margin-left: 150px;
-	margin-top: 80px;
-	cursor: pointer;
-}
-
-#logs {
-	display: none;
-	position: absolute;
-	top: 56.2%;
-	left: 50%;
-	background: rgb(255, 0, 187);
-	width: 250px;
-	margin: -320px 0 0 -160px;
-	padding: 45px;
-	box-shadow: 0 0 3px rgb(255, 0, 0);
-	margin-top: -200px;
-	margin-right 100px;
-}
-
-.virsraksts {
-	margin-top: -35px;
-	margin-left: 25px;
-}
-#SlimnicasNosaukums {
-	width: 235px;
-	text-align: center;
-}
-#file {
-	margin-top: 10px;
-}
-
-#poga {
-	margin-left: 60px;
-	margin-top: 20px;
-}
-
-.close{
-	width: 30px;
-	margin-top: -245px;
-	margin-left: 270px;
+.fix{
+	height: 100px;
 }
