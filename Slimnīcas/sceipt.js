@@ -1,28 +1,84 @@
 const logs = document.getElementById('logs');
-let SlimnīcasSaraksts = [];
+const plus = document.getElementById('plus');
+let wraper = document.querySelector('#pievienot');
+let SlimnīcuSaraksts = [];
 
-document.getElementById('plus').addEventListener('click', () => {
+window.addEventListener('load', () => {
+	SlimnīcuSaraksts = JSON.parse(
+		localStorage.getItem('SlimnīcuSaraksts') || '[]'
+	);
+	render();
+});
+
+plus.addEventListener('click', () => {
 	logs.style.display = 'block';
-	document.getElementById('plus').style.display = 'none';
+	plus.style.display = 'none';
 });
 
 document.getElementById('poga').addEventListener('click', () => {
-	document.getElementById('plus').style.display = 'inline';
 	logs.style.display = 'none';
+	plus.style.display = 'inline-flex';
+	plus.style.marginBottom = '45px';
 
 	let saraksts = {
+		SlimnīcasBilde: SlimnīcuSaraksts.file,
 		SlimnīcasNosaukums: SlimnicasNosaukums.value,
-		bilde: file.value,
 	};
 
-	SlimnicasNosaukums.value = '';
-	file.value = '';
+	if (SlimnicasNosaukums.value === '') {
+		logs.style.display = 'block';
+		plus.style.display = 'none';
+		alert('Ierakstiet slimnīcas nosaukumu');
+	} else if (file.value === '') {
+		logs.style.display = 'block';
+		plus.style.display = 'none';
+		alert('Ievietojat slimnīcas bildi!');
+	} else {
+		file.value = '';
+		SlimnicasNosaukums.value = '';
+		SlimnīcuSaraksts.push(saraksts);
+		render();
+	}
+});
 
-	SlimnīcasSaraksts.push(saraksts);
+document.querySelector('#file').addEventListener('change', function () {
+	const reader = new FileReader();
 
-	console.log(SlimnīcasSaraksts);
+	reader.addEventListener('load', () => {
+		SlimnīcuSaraksts.file = reader.result;
+	});
+	reader.readAsDataURL(this.files[0]);
 });
 
 function render() {
-	let Slimnīcas = document.getElementById('saraksts');
+	let pievienot = document.getElementById('pievienot');
+	pievienot.innerHTML = '';
+
+	for (let i = 0; i < SlimnīcuSaraksts.length; i++) {
+		let saraksts = `
+	<div class = 'pievienot'>
+		<img src='${SlimnīcuSaraksts[i].SlimnīcasBilde}' class= 'bilde'>
+		<h2 class='slimnicasvirsraksts'>${SlimnīcuSaraksts[i].SlimnīcasNosaukums}</h2>
+		<img src="/Slimnīcas/bildes/close.png" class = "close" onclick='removeBook("${SlimnīcuSaraksts[i].SlimnīcasNosaukums}")'>
+	</div>
+	`;
+		pievienot.innerHTML += saraksts;
+	}
+	localStorage.setItem('SlimnīcuSaraksts', JSON.stringify(SlimnīcuSaraksts));
+}
+
+function removeBook(saraksts) {
+	for (let i = 0; i < SlimnīcuSaraksts.length; i++) {
+		if (saraksts === SlimnīcuSaraksts[i].SlimnīcasNosaukums) {
+			delete SlimnīcuSaraksts[i];
+			break;
+		}
+	}
+
+	SlimnīcuSaraksts = SlimnīcuSaraksts.filter(function (e) {
+		return e != null;
+	});
+
+	localStorage.setItem('SlimnīcuSaraksts', JSON.stringify(SlimnīcuSaraksts));
+	render();
 }
