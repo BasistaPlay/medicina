@@ -104,7 +104,7 @@ function render() {
 	for (let i = 0; i < ĀrstuSaraksts.length; i++) {
 		let sarakstsĀrstu = `
     <div class='pievienotArstu'>
-		<img src='${ĀrstuSaraksts[i].ArstaBilde}' class= 'ArstaBilde'>
+		<img src='${ĀrstuSaraksts[i].ArstaBilde}' class= 'ArstaBilde' onclick=ParadaAprakstu("${ĀrstuSaraksts[i].ArstaVards}")>
 		<h2 class='vards'>${ĀrstuSaraksts[i].ArstaVards}</h2>
         <h3 class='Profesija'>${ĀrstuSaraksts[i].Profesija}</h3>
 		<img src="/Slimnīcas/bildes/close.png" class = "close" onclick='remove("${ĀrstuSaraksts[i].ArstaVards}")'>
@@ -112,6 +112,13 @@ function render() {
 	`;
 		pievienotArstu.innerHTML += sarakstsĀrstu;
 	}
+	var ArstaBilde = document.getElementsByClassName('ArstaBilde');
+	for (i = 0; i < ArstaBilde.length; i++) {
+		ArstaBilde[i].onclick = function () {
+			Aprakstss();
+		};
+	}
+
 	localStorage.setItem('ĀrstuSaraksts', JSON.stringify(ĀrstuSaraksts));
 }
 

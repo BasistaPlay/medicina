@@ -87,3 +87,38 @@ body {
 .Kontakti {
 	background-color: #ddd;
 }
+
+.Palīdzībasnodaļa {
+	padding: 20px;
+	margin-left: 200px;
+	margin-top: 100px;
+}
+
+.Traumpunkts {
+	margin-left: 250px;
+}
+.Uzziņas {
+	margin-left: 250px;
+}
+.Uzņemšana {
+	margin-left: 250px;
+}
+.konsultatīvāNodaļa {
+	margin-left: 200px;
+	padding: 20px;
+}
+.Reģistratūra {
+	margin-left: 250px;
+}
+.Aprūpesmājās {
+	margin-left: 250px;
+}
+.Filiāles {
+	margin-left: 215px;
+}
+.Zobārstniecība {
+	margin-left: 250px;
+}
+.Tuberkuloze {
+	margin-left: 250px;
+}
