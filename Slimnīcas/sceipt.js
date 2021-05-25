@@ -7,7 +7,7 @@ window.addEventListener('load', () => {
 	SlimnīcuSaraksts = JSON.parse(
 		localStorage.getItem('SlimnīcuSaraksts') || '[]'
 	);
-	render();
+	PievienotSlimnīcu();
 });
 
 plus.addEventListener('click', () => {
@@ -37,7 +37,7 @@ document.getElementById('poga').addEventListener('click', () => {
 		file.value = '';
 		SlimnicasNosaukums.value = '';
 		SlimnīcuSaraksts.push(saraksts);
-		render();
+		PievienotSlimnīcu();
 	}
 });
 
@@ -50,14 +50,14 @@ document.querySelector('#file').addEventListener('change', function () {
 	reader.readAsDataURL(this.files[0]);
 });
 
-function render() {
+function PievienotSlimnīcu() {
 	let pievienot = document.getElementById('pievienot');
 	pievienot.innerHTML = '';
 
 	for (let i = 0; i < SlimnīcuSaraksts.length; i++) {
 		let saraksts = `
 	<div class = 'pievienot'>
-		<img src='${SlimnīcuSaraksts[i].SlimnīcasBilde}' class= 'bilde'>
+		<a href="/ārsti/index.html"><img src='${SlimnīcuSaraksts[i].SlimnīcasBilde}' class= 'bilde'></a>
 		<h2 class='slimnicasvirsraksts'>${SlimnīcuSaraksts[i].SlimnīcasNosaukums}</h2>
 		<img src="/Slimnīcas/bildes/close.png" class = "close" onclick='removeBook("${SlimnīcuSaraksts[i].SlimnīcasNosaukums}")'>
 	</div>
@@ -74,11 +74,10 @@ function removeBook(saraksts) {
 			break;
 		}
 	}
-
 	SlimnīcuSaraksts = SlimnīcuSaraksts.filter(function (e) {
 		return e != null;
 	});
 
 	localStorage.setItem('SlimnīcuSaraksts', JSON.stringify(SlimnīcuSaraksts));
-	render();
+	PievienotSlimnīcu();
 }

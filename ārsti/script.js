@@ -18,38 +18,32 @@ document.getElementById('poga').addEventListener('click', () => {
 	plus.style.display = 'inline-flex';
 	plus.style.marginBottom = '100px';
 
-	let saraksts = {
+	let sarakstsĀrstu = {
 		ArstaBilde: ĀrstuSaraksts.file,
 		ArstaVards: arstavards.value,
 		Profesija: arstaprofesija.value,
 		Pirmdiena: Pirmdienas.value,
 		PirmdienaLidz: Pirmdienas2.value,
+		Nestrada1: Nestrada1.checked,
 		Otradiena: otradienas.value,
 		OtradienaLidz: otradienas2.value,
+		Nestrada2: Nestrada2.checked,
 		tresdienas: tresdienas.value,
 		tresdienasLidz: tresdienas2.value,
+		Nestrada3: Nestrada3.checked,
 		ceturdienas: ceturdienas.value,
 		ceturdienasLidz: ceturdienas2.value,
+		Nestrada4: Nestrada4.checked,
 		piekdienas: piekdienas.value,
 		piekdienasLidz: piekdienas2.value,
+		Nestrada5: Nestrada5.checked,
 		sestdienas: sestdienas.value,
 		sestdienasLidz: sestdienas2.value,
+		Nestrada6: Nestrada6.checked,
 		svētdienas: svētdienas.value,
 		svētdienasLīdz: svētdienas2.value,
+		Nestrada7: Nestrada7.checked,
 	};
-
-	//if (Pirmdienas.value === '') {
-	//	Pirmdienas.value == 'Nestrādā';
-	//} else if (otradienas.value === '') {
-	//	Pirmdienas.value == 'Nestrādā';
-	//} else if (tresdienas.value === '') {
-	//	Pirmdienas.value == 'Nestrādā';
-	//} else if (piekdienas.value === '') {
-	//	Pirmdienas.value == 'Nestrādā';
-	//} else if (sestdienas.value === '') {
-	//	Pirmdienas.value == 'Nestrādā';
-	//} else if (svētdienas.value === '') {
-	//	Pirmdienas.value == 'Nestrādā';
 
 	if (arstavards.value === '') {
 		logs.style.display = 'block';
@@ -81,14 +75,19 @@ document.getElementById('poga').addEventListener('click', () => {
 		sestdienas2.value = '';
 		svētdienas.value = '';
 		svētdienas2.value = '';
+		Nestrada1.value = '';
+		Nestrada2.value = '';
+		Nestrada3.value = '';
+		Nestrada4.value = '';
+		Nestrada5.value = '';
+		Nestrada6.value = '';
+		Nestrada7.value = '';
 
-		ĀrstuSaraksts.push(saraksts);
-
+		ĀrstuSaraksts.push(sarakstsĀrstu);
 		console.log(ĀrstuSaraksts);
 		render();
 	}
 });
-
 document.querySelector('#ArstaBilde').addEventListener('change', function () {
 	const reader = new FileReader();
 
@@ -103,22 +102,22 @@ function render() {
 	pievienotArstu.innerHTML = '';
 
 	for (let i = 0; i < ĀrstuSaraksts.length; i++) {
-		let saraksts = `
-    <div class="pievienotArstu">
+		let sarakstsĀrstu = `
+    <div class='pievienotArstu'>
 		<img src='${ĀrstuSaraksts[i].ArstaBilde}' class= 'ArstaBilde'>
 		<h2 class='vards'>${ĀrstuSaraksts[i].ArstaVards}</h2>
         <h3 class='Profesija'>${ĀrstuSaraksts[i].Profesija}</h3>
-		<img src="/Slimnīcas/bildes/close.png" class = "close" onclick='removeBook("${ĀrstuSaraksts[i].ArstaVards}")'>
+		<img src="/Slimnīcas/bildes/close.png" class = "close" onclick='remove("${ĀrstuSaraksts[i].ArstaVards}")'>
 	</div>
 	`;
-		pievienotArstu.innerHTML += saraksts;
+		pievienotArstu.innerHTML += sarakstsĀrstu;
 	}
 	localStorage.setItem('ĀrstuSaraksts', JSON.stringify(ĀrstuSaraksts));
 }
 
-function removeBook(saraksts) {
+function remove(sarakstsĀrstu) {
 	for (let i = 0; i < ĀrstuSaraksts.length; i++) {
-		if (saraksts === ĀrstuSaraksts[i].ArstaVards) {
+		if (sarakstsĀrstu === ĀrstuSaraksts[i].ArstaVards) {
 			delete ĀrstuSaraksts[i];
 			break;
 		}
@@ -129,5 +128,8 @@ function removeBook(saraksts) {
 	});
 
 	localStorage.setItem('ĀrstuSaraksts', JSON.stringify(ĀrstuSaraksts));
+	render();
+
+	localStorage.setItem('ĀrstuApraksts', JSON.stringify(ĀrstuSaraksts));
 	render();
 }

@@ -84,7 +84,7 @@ body {
 	margin-left: 89%;
 }
 
-.Kontakti {
+.slimnicas {
 	background-color: #ddd;
 }
 
@@ -94,7 +94,7 @@ body {
 	top: 56.2%;
 	left: 50%;
 	background: rgb(255, 0, 187);
-	width: 255px;
+	width: 300px;
 	margin: -320px 0 0 -160px;
 	padding: 45px;
 	box-shadow: 0 0 3px rgb(255, 0, 0);
@@ -117,12 +117,12 @@ body {
 }
 
 #arstavards{
-	width: 250px;
+	width: 290px;
 	text-align: center;
 }
 
 #arstaprofesija{
-	width: 250px;
+	width: 290px;
 	margin-top: 5px;
 	text-align: center;
 }
@@ -131,9 +131,7 @@ p {
 	margin-bottom: -10px;
 }
 
-input[type=time]{
-	margin-left:px
-}
+
 
 #Pirmdienas{
 	margin-left: 10px;
@@ -161,8 +159,8 @@ input[type=time]{
 }
 
 .DarbaLaiks{
-	margin-top:5px;
-	margin-left: 70px;
+	margin-top:15px;
+	margin-left: 105px;
 }
 #plus {
 	display: inline-flex;
@@ -216,4 +214,90 @@ margin-top: -1px;
 
 .fix{
 	height: 100px;
+}
+
+.apraksts{
+	background-color:rgb(5, 122, 255);
+	box-shadow: 0 0 3px rgb(255, 0, 0);
+	width: 800px;
+	height: 400px;
+	margin-top: 100px;
+	margin-left: 500px;
+	position: fixed;
+	border-radius: 10px;
+
+}
+#aprakstaBilde{
+	width: 210px;
+	height: 280px;
+	margin-left: 20px;
+	margin-top: 15px;
+	border-radius: 10px;
+	position: absolute;
+	display: flex;
+	position: fixed;
+}
+#Vārdsuzvārds{
+	margin-left: 270px;
+	margin-top: 50px;
+	position: fixed;
+}
+
+#ĀrstaProfesija{
+	margin-left: 272px;
+	margin-top: 75px;
+	position: fixed;
+}
+#DarbaLaiks{
+	margin-top: 50px;
+	margin-left: 500px;
+	width: 1000px;
+	position: fixed;
+
+}
+
+#laiki{
+	text-align: left;
+	position: absolute;
+	margin-left: 500px;
+	margin-top: 75px;
+	font-size: 18px;
+	width: 1500px;
+	height: 220px;
+	border-radius: 10px;
+	position: fixed;
+
+}
+#Pierakstīties{
+	margin-left: 270px;
+	margin-top: 150px;
+	border-radius: 5px;
+	width: 130px;
+	height: 30px;
+	background-color:red;
+	color: rgb(255, 255, 255);
+	font-family: cursive;
+	font-size: 16px;
+	cursor: pointer;
+	position: fixed;
+
+}
+.close2{
+	width: 30px;
+	margin-top:5px;
+	margin-left:765px;
+	display: flex;
+	cursor: pointer;
+	position: fixed;
+
+}
+
+input[type=checkbox]{
+	margin-left: 25px;
+}
+
+.nestrada{
+	display:block;
+	margin-left: 250px;
+
 }

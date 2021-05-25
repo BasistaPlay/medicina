@@ -36,48 +36,66 @@
         <input placeholder="Arsta vārds un uzvārds" type="text" id="arstavards">
         <input placeholder="Kas pa ārstu" type="text" id="arstaprofesija">
         <h2 class="DarbaLaiks">Darba laiks:</h2>
-        <p>Pirmdienas:
+        <h3 class="nestrada">Nestrādā</h3>
+        <p>
+            Pirmdienas:
             <input type="time" id="Pirmdienas">
             <a>-</a>
             <input type="time" id="Pirmdienas2">
-        <p>otradienas:
+            <input type="checkbox" id="Nestrada1">
+        </p>
+        <p>
+            otradienas:
             <input type="time" id="otradienas" name="otradienas">
             <a>-</a>
             <input type="time" id="otradienas2" name="otradienas2">
+            <input type="checkbox" id="Nestrada2" name="nestrada" value="Nestrādā">
         </p>
-        <p>trešdienas:
+        <p>
+            trešdienas:
             <input type="time" id="tresdienas" name="tresdienas">
             <a>-</a>
             <input type="time" id="tresdienas2" name="tresdienas">
+            <input type="checkbox" id="Nestrada3" name="nestrada" value="Nestrādā">
         </p>
-        <p>ceturdienas:
+        <p>
+            ceturdienas:
             <input type="time" id="ceturdienas" name="ceturdienas">
             <a>-</a>
             <input type="time" id="ceturdienas2" name="ceturdienas2">
+            <input type="checkbox" id="Nestrada4" name="nestrada" value="Nestrādā">
         </p>
-        <p>piekdienas:
+        <p>
+            piekdienas:
             <input type="time" id="piekdienas" name="piekdienas">
             <a>-</a>
             <input type="time" id="piekdienas2" name="piekdienas2">
+            <input type="checkbox" id="Nestrada5" name="nestrada" value="Nestrādā">
         </p>
-        <p>sestdienas:
+        <p>
+            sestdienas:
             <input type="time" id="sestdienas" name="sestdienas">
             <a>-</a>
             <input type="time" id="sestdienas2" name="sestdienas2">
+            <input type="checkbox" id="Nestrada6" name="nestrada" value="Nestrādā">
         </p>
-        <p>svētdienas:
+        <p>
+            svētdienas:
             <input type="time" id="svētdienas" name="svētdienas">
             <a>-</a>
             <input type="time" id="svētdienas2" name="svētdienas2">
+            <input type="checkbox" id="Nestrada7" name="nestrada" value="Nestrādā">
         </p>
         <input type="file" id="ArstaBilde" accept="image/png, image/jpeg">
         <button id="poga">Pievienot slimnīcu</button>
     </div>
-
+    <div id='Apraksts'>
+    </div>
     <div id="ArstuPievienosana">
         <span id="pievienotArstu">
         </span>
         <img src="/Slimnīcas/bildes/+.png" alt="plus" id="plus">
+    </div>
     </div>
     <div class=fix></div>
 
@@ -88,6 +106,7 @@
     </div>
 
     <script src="/ārsti/script.js"></script>
+    <script src="/ārsti/script2.js"></script>
 </body>
 
 
