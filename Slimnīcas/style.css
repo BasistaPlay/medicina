@@ -9,43 +9,45 @@ body {
 }
 
 .menu {
-	display: block;
-	background: rgb(255, 255, 255);
+	display: fixed;
+	background: rgb(10, 218, 44);
 	background: linear-gradient(
 		0deg,
 		rgba(255, 255, 255, 1) 0%,
 		rgba(255, 0, 0, 1) 100%
 	);
 	overflow: hidden;
-	width: 377, 5px;
+	width: 717px;
 	height: 44px;
 	position: absolute;
-	margin-left: 450px;
-	margin-top: -125px;
+	margin-left: 350px;
+	margin-top: -140px;
 }
+
 .menu a {
 	float: left;
 	color: #000000;
 	text-align: center;
-	padding: 12px 16px;
+	padding: 12px 50px;
 	text-decoration: none;
-	font-size: 17px;
+	font-size: 18px;
+	font-family:Andale Mono, monospace ;
 }
 
 .menu a:hover {
-	background-color: #ddd;
+	background: rgb(255,255,255);
+	background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(97,243,255,1) 92%, rgba(0,236,255,1) 100%);
 	color: black;
 }
 
 .meklet {
-	margin-left: 1000px;
-	margin-top: -115px;
-
+	margin-left: 1200px;
+	margin-top: -128px;
 }
 
 .meklēšanasAile {
 	width: 350px;
-	height: 20px;
+	height: 23px;
 }
 
 .MeklešanasPoga {
@@ -55,10 +57,10 @@ body {
 
 .Ieiet {
 	display: block;
-	margin-top: -20px;
-	margin-left: 1600px;
-	width: 100px;
-	height: 30px;
+	margin-top: -35px;
+	margin-left: 1700px;
+	width: 150px;
+	height: 40px;
 	border-radius: 5px;
 }
 .apaksa {
@@ -94,7 +96,7 @@ body {
 	background-color: #ddd;
 }
 
-.pievienot {
+.pievienot2 {
 	display: inline-flex;
 	flex-direction: column;
 	width: 350px;
@@ -102,6 +104,7 @@ body {
 	cursor: pointer;
 	padding: 20px;
 	margin: 15.13px;
+	padding-top: 65px;
 }
 
 .slimnicasvirsraksts {
@@ -158,6 +161,8 @@ body {
 	width: 30px;
 	margin-top: -245px;
 	margin-left: 270px;
+	position: relative;
+	
 }
 .fix{
 	height: 80px;

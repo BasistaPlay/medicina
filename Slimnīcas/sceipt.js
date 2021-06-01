@@ -1,7 +1,7 @@
 const logs = document.getElementById('logs');
 const plus = document.getElementById('plus');
-let wraper = document.querySelector('#pievienot');
-let SlimnīcuSaraksts = [];
+let wraper = document.querySelector('#pievienot2');
+saraksts = [];
 
 window.addEventListener('load', () => {
 	SlimnīcuSaraksts = JSON.parse(
@@ -51,13 +51,13 @@ document.querySelector('#file').addEventListener('change', function () {
 });
 
 function PievienotSlimnīcu() {
-	let pievienot = document.getElementById('pievienot');
+	let pievienot = document.getElementById('pievienot2');
 	pievienot.innerHTML = '';
 
 	for (let i = 0; i < SlimnīcuSaraksts.length; i++) {
 		let saraksts = `
-	<div class = 'pievienot'>
-		<a href="/ārsti/index.html"><img src='${SlimnīcuSaraksts[i].SlimnīcasBilde}' class= 'bilde'></a>
+	<div class = 'pievienot2'>
+		<a href="/ārsti/index.html"><img src='${SlimnīcuSaraksts[i].SlimnīcasBilde}' class= 'bilde' onclick = 'slimnicas(this)'></a>
 		<h2 class='slimnicasvirsraksts'>${SlimnīcuSaraksts[i].SlimnīcasNosaukums}</h2>
 		<img src="/Slimnīcas/bildes/close.png" class = "close" onclick='removeBook("${SlimnīcuSaraksts[i].SlimnīcasNosaukums}")'>
 	</div>
@@ -73,6 +73,7 @@ function removeBook(saraksts) {
 			delete SlimnīcuSaraksts[i];
 			break;
 		}
+		localStorage.removeItem('ĀrstuSaraksts0');
 	}
 	SlimnīcuSaraksts = SlimnīcuSaraksts.filter(function (e) {
 		return e != null;

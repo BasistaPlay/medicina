@@ -1,5 +1,5 @@
-const logs = document.getElementById('logs2');
-const plus = document.getElementById('plus');
+const logs2 = document.getElementById('logs2');
+const plus2 = document.getElementById('plus');
 let wraper = document.querySelector('#pievienot');
 let ĀrstuSaraksts = [];
 
@@ -8,15 +8,72 @@ window.addEventListener('load', () => {
 	render();
 });
 
-plus.addEventListener('click', () => {
-	logs.style.display = 'block';
-	plus.style.display = 'none';
+plus2.addEventListener('click', () => {
+	logs2.style.display = 'block';
+	plus2.style.display = 'none';
 });
 
 document.getElementById('poga').addEventListener('click', () => {
-	logs.style.display = 'none';
-	plus.style.display = 'inline-flex';
-	plus.style.marginBottom = '100px';
+	logs2.style.display = 'none';
+	plus2.style.display = 'inline-flex';
+	plus2.style.marginBottom = '100px';
+
+	var valid1 = '';
+	if (document.getElementById('Nestrada1').checked) {
+		valid1 = 'Nestrādā';
+		Pirmdienas.value = '';
+		Pirmdienas2.value = '';
+	} else {
+		valid1 = '';
+	}
+	var valid2 = '';
+	if (document.getElementById('Nestrada2').checked) {
+		valid2 = 'Nestrādā';
+		otradienas.value = '';
+		otradienas2.value = '';
+	} else {
+		valid2 = '';
+	}
+	var valid3 = '';
+	if (document.getElementById('Nestrada3').checked) {
+		valid3 = 'Nestrādā';
+		tresdienas.value = '';
+		tresdienas2.value = '';
+	} else {
+		valid3 = '';
+	}
+	var valid4 = '';
+	if (document.getElementById('Nestrada4').checked) {
+		valid4 = 'Nestrādā';
+		ceturdienas.value = '';
+		ceturdienas2.value = '';
+	} else {
+		valid4 = '';
+	}
+	var valid5 = '';
+	if (document.getElementById('Nestrada5').checked) {
+		valid5 = 'Nestrādā';
+		piekdienas.value = '';
+		piekdienas2.value = '';
+	} else {
+		valid5 = '';
+	}
+	var valid6 = '';
+	if (document.getElementById('Nestrada6').checked) {
+		valid6 = 'Nestrādā';
+		sestdienas.value = '';
+		sestdienas2.value = '';
+	} else {
+		valid6 = '';
+	}
+	var valid7 = '';
+	if (document.getElementById('Nestrada7').checked) {
+		valid7 = 'Nestrādā';
+		svētdienas.value = '';
+		svētdienas2.value = '';
+	} else {
+		valid7 = '';
+	}
 
 	let sarakstsĀrstu = {
 		ArstaBilde: ĀrstuSaraksts.file,
@@ -24,39 +81,88 @@ document.getElementById('poga').addEventListener('click', () => {
 		Profesija: arstaprofesija.value,
 		Pirmdiena: Pirmdienas.value,
 		PirmdienaLidz: Pirmdienas2.value,
-		Nestrada1: Nestrada1.checked,
+		Nestrada1: valid1,
 		Otradiena: otradienas.value,
 		OtradienaLidz: otradienas2.value,
-		Nestrada2: Nestrada2.checked,
+		Nestrada2: valid2,
 		tresdienas: tresdienas.value,
 		tresdienasLidz: tresdienas2.value,
-		Nestrada3: Nestrada3.checked,
+		Nestrada3: valid3,
 		ceturdienas: ceturdienas.value,
 		ceturdienasLidz: ceturdienas2.value,
-		Nestrada4: Nestrada4.checked,
+		Nestrada4: valid4,
 		piekdienas: piekdienas.value,
 		piekdienasLidz: piekdienas2.value,
-		Nestrada5: Nestrada5.checked,
+		Nestrada5: valid5,
 		sestdienas: sestdienas.value,
 		sestdienasLidz: sestdienas2.value,
-		Nestrada6: Nestrada6.checked,
+		Nestrada6: valid6,
 		svētdienas: svētdienas.value,
 		svētdienasLīdz: svētdienas2.value,
-		Nestrada7: Nestrada7.checked,
+		Nestrada7: valid7,
 	};
 
 	if (arstavards.value === '') {
-		logs.style.display = 'block';
-		plus.style.display = 'none';
+		logs2.style.display = 'block';
+		plus2.style.display = 'none';
 		alert('Ierakstiet ārsta vārdu un uzvārdu!');
 	} else if (arstaprofesija.value === '') {
-		logs.style.display = 'block';
-		plus.style.display = 'none';
+		logs2.style.display = 'block';
+		plus2.style.display = 'none';
 		alert('Ierakstiet ārsta profesiju!');
 	} else if (ArstaBilde.value === '') {
-		logs.style.display = 'block';
-		plus.style.display = 'none';
+		logs2.style.display = 'block';
+		plus2.style.display = 'none';
 		alert('Ievietojat ārsta bildi!');
+	} else if (
+		(Pirmdienas2.value === '' || Pirmdienas.value === '') &&
+		valid1 === ''
+	) {
+		alert('Ievadiet pirmdienas Darba laiku vai uzlieciet ka nestrādā');
+		logs2.style.display = 'block';
+		plus2.style.display = 'none';
+	} else if (
+		(otradienas2.value === '' || otradienas.value === '') &&
+		valid2 === ''
+	) {
+		alert('Ievadiet otradienas Darba laiku vai uzlieciet ka nestrādā');
+		logs2.style.display = 'block';
+		plus2.style.display = 'none';
+	} else if (
+		(tresdienas2.value === '' || tresdienas.value === '') &&
+		valid3 === ''
+	) {
+		alert('Ievadiet tresdienas Darba laiku vai uzlieciet ka nestrādā');
+		logs2.style.display = 'block';
+		plus2.style.display = 'none';
+	} else if (
+		(ceturdienas2.value === '' || ceturdienas.value === '') &&
+		valid4 === ''
+	) {
+		alert('Ievadiet ceturdienas Darba laiku vai uzlieciet ka nestrādā');
+		logs2.style.display = 'block';
+		plus2.style.display = 'none';
+	} else if (
+		(piekdienas2.value === '' || piekdienas.value === '') &&
+		valid5 === ''
+	) {
+		alert('Ievadiet piekdienas Darba laiku vai uzlieciet ka nestrādā');
+		logs2.style.display = 'block';
+		plus2.style.display = 'none';
+	} else if (
+		(sestdienas2.value === '' || sestdienas.value === '') &&
+		valid6 === ''
+	) {
+		alert('Ievadiet sestdienas Darba laiku vai uzlieciet ka nestrādā');
+		logs2.style.display = 'block';
+		plus2.style.display = 'none';
+	} else if (
+		(svētdienas2.value === '' || svētdienas.value === '') &&
+		valid7 === ''
+	) {
+		alert('Ievadiet svētdienas Darba laiku vai uzlieciet ka nestrādā');
+		logs2.style.display = 'block';
+		plus2.style.display = 'none';
 	} else {
 		ArstaBilde.value = '';
 		arstavards.value = '';
@@ -75,19 +181,21 @@ document.getElementById('poga').addEventListener('click', () => {
 		sestdienas2.value = '';
 		svētdienas.value = '';
 		svētdienas2.value = '';
-		Nestrada1.value = '';
-		Nestrada2.value = '';
-		Nestrada3.value = '';
-		Nestrada4.value = '';
-		Nestrada5.value = '';
-		Nestrada6.value = '';
-		Nestrada7.value = '';
+		document.getElementById('Nestrada1').checked = false;
+		document.getElementById('Nestrada2').checked = false;
+		document.getElementById('Nestrada3').checked = false;
+		document.getElementById('Nestrada4').checked = false;
+		document.getElementById('Nestrada5').checked = false;
+		document.getElementById('Nestrada6').checked = false;
+		document.getElementById('Nestrada7').checked = false;
 
 		ĀrstuSaraksts.push(sarakstsĀrstu);
-		console.log(ĀrstuSaraksts);
+		ĀrstuApraksts.push(ĀrstuSaraksts);
 		render();
+		PievienoAprakstu();
 	}
 });
+
 document.querySelector('#ArstaBilde').addEventListener('change', function () {
 	const reader = new FileReader();
 
@@ -104,7 +212,7 @@ function render() {
 	for (let i = 0; i < ĀrstuSaraksts.length; i++) {
 		let sarakstsĀrstu = `
     <div class='pievienotArstu'>
-		<img src='${ĀrstuSaraksts[i].ArstaBilde}' class= 'ArstaBilde' onclick=ParadaAprakstu("${ĀrstuSaraksts[i].ArstaVards}")>
+		<img src='${ĀrstuSaraksts[i].ArstaBilde}' class= 'ArstaBilde' onclick = 'ParadaAprakstu(this)'>
 		<h2 class='vards'>${ĀrstuSaraksts[i].ArstaVards}</h2>
         <h3 class='Profesija'>${ĀrstuSaraksts[i].Profesija}</h3>
 		<img src="/Slimnīcas/bildes/close.png" class = "close" onclick='remove("${ĀrstuSaraksts[i].ArstaVards}")'>
@@ -112,13 +220,6 @@ function render() {
 	`;
 		pievienotArstu.innerHTML += sarakstsĀrstu;
 	}
-	var ArstaBilde = document.getElementsByClassName('ArstaBilde');
-	for (i = 0; i < ArstaBilde.length; i++) {
-		ArstaBilde[i].onclick = function () {
-			Aprakstss();
-		};
-	}
-
 	localStorage.setItem('ĀrstuSaraksts', JSON.stringify(ĀrstuSaraksts));
 }
 
@@ -139,4 +240,10 @@ function remove(sarakstsĀrstu) {
 
 	localStorage.setItem('ĀrstuApraksts', JSON.stringify(ĀrstuSaraksts));
 	render();
+}
+
+function ParadaAprakstu(sarakstsĀrstu) {
+	var divs = document.querySelectorAll('.ArstaBilde');
+	var index = Array.from(divs).indexOf(sarakstsĀrstu);
+	document.getElementById(index).style.display = 'flex';
 }

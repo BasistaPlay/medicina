@@ -5,30 +5,39 @@ window.addEventListener('load', () => {
 	PievienoAprakstu();
 });
 
-document.getElementById('poga').addEventListener('click', () => {
-	ĀrstuApraksts.push(ĀrstuSaraksts);
-	PievienoAprakstu();
-});
-
 function PievienoAprakstu() {
 	let Apraksts = document.getElementById('Apraksts');
 	Apraksts.innerHTML = '';
 
 	for (let i = 0; i < ĀrstuApraksts.length; i++) {
 		let ArstiemApraksts = `
-    <div class = 'apraksts' style="display: none">
-            <img src="${ĀrstuSaraksts[i].ArstaBilde}" alt="bilde" id="aprakstaBilde">
+    <div class = 'apraksts' id = '${[i]}' style="display: none">
+    		<img src="${ĀrstuSaraksts[i].ArstaBilde}" alt="bilde" id="aprakstaBilde">
             <h2 id="Vārdsuzvārds">${ĀrstuSaraksts[i].ArstaVards}</h2>
             <h3 id="ĀrstaProfesija">${ĀrstuSaraksts[i].Profesija}</h3>
             <h2 id="DarbaLaiks">Darba Laiks</h2>
             <a id="laiki">
-            <p>Pirmdiena ${ĀrstuSaraksts[i].Pirmdiena} - ${ĀrstuSaraksts[i].PirmdienaLidz}</p>
-            <p>Otradiena ${ĀrstuSaraksts[i].Otradiena} - ${ĀrstuSaraksts[i].OtradienaLidz}</p>
-            <p>Trešdiena ${ĀrstuSaraksts[i].tresdienas} - ${ĀrstuSaraksts[i].tresdienasLidz}</p>
-            <p>Ceturdiena ${ĀrstuSaraksts[i].ceturdienas} - ${ĀrstuSaraksts[i].ceturdienasLidz}</p>
-            <p>Piekdiena ${ĀrstuSaraksts[i].piekdienas} - ${ĀrstuSaraksts[i].piekdienasLidz}</p>
-            <p>Sesdiena ${ĀrstuSaraksts[i].sestdienas} - ${ĀrstuSaraksts[i].sestdienasLidz}</p>
-            <p>Svētdiena ${ĀrstuSaraksts[i].svētdienas} - ${ĀrstuSaraksts[i].svētdienasLīdz}</p>
+            <p>Pirmdiena ${ĀrstuSaraksts[i].Pirmdiena} - ${
+			ĀrstuSaraksts[i].PirmdienaLidz
+		}${ĀrstuSaraksts[i].Nestrada1}</p>
+            <p>Otradiena ${ĀrstuSaraksts[i].Otradiena} - ${
+			ĀrstuSaraksts[i].OtradienaLidz
+		}${ĀrstuSaraksts[i].Nestrada2}</p>
+            <p>Trešdiena ${ĀrstuSaraksts[i].tresdienas} - ${
+			ĀrstuSaraksts[i].tresdienasLidz
+		}${ĀrstuSaraksts[i].Nestrada3}</p>
+            <p>Ceturdiena ${ĀrstuSaraksts[i].ceturdienas} - ${
+			ĀrstuSaraksts[i].ceturdienasLidz
+		}${ĀrstuSaraksts[i].Nestrada4}</p>
+            <p>Piekdiena ${ĀrstuSaraksts[i].piekdienas} - ${
+			ĀrstuSaraksts[i].piekdienasLidz
+		}${ĀrstuSaraksts[i].Nestrada5}</p>
+            <p>Sesdiena ${ĀrstuSaraksts[i].sestdienas} - ${
+			ĀrstuSaraksts[i].sestdienasLidz
+		}${ĀrstuSaraksts[i].Nestrada6}</p>
+            <p>Svētdiena ${ĀrstuSaraksts[i].svētdienas} - ${
+			ĀrstuSaraksts[i].svētdienasLīdz
+		}${ĀrstuSaraksts[i].Nestrada7}</p>
             </a>
             <button id="Pierakstīties">Pierakstīties</button>
             <img src="/Slimnīcas/bildes/close.png" class = "close2")>
