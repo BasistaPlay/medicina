@@ -1,0 +1,128 @@
+body {
+	background-color: #75abfb;
+}
+
+.logo {
+	height: 90%;
+	margin-top: 30px;
+	margin-left: 50px;
+}
+
+.menu {
+	display: block;
+	background: rgb(10, 218, 44);
+	background: linear-gradient(
+		0deg,
+		rgba(255, 255, 255, 1) 0%,
+		rgba(255, 0, 0, 1) 100%
+	);
+	overflow: hidden;
+	width: 717px;
+	height: 44px;
+	position: absolute;
+	margin-left: 350px;
+	margin-top: -140px;
+}
+
+.menu a {
+	float: left;
+	color: #000000;
+	text-align: center;
+	padding: 12px 50px;
+	text-decoration: none;
+	font-size: 18px;
+	font-family: Andale Mono, monospace;
+}
+
+.menu a:hover {
+	background: rgb(255, 255, 255);
+	background: linear-gradient(
+		0deg,
+		rgba(255, 255, 255, 1) 0%,
+		rgba(97, 243, 255, 1) 92%,
+		rgba(0, 236, 255, 1) 100%
+	);
+	color: black;
+}
+
+.meklet {
+	margin-left: 1200px;
+	margin-top: -128px;
+}
+
+.meklēšanasAile {
+	width: 350px;
+	height: 23px;
+}
+
+.MeklešanasPoga {
+	width: 15px;
+	height: 15px;
+}
+
+.Ieiet {
+	display: block;
+	margin-top: -35px;
+	margin-left: 1700px;
+	width: 150px;
+	height: 40px;
+	border-radius: 5px;
+}
+
+.jaunumi {
+	margin-top: 100px;
+	margin-left: 170px;
+	font-size: 28px;
+	border-color: rgb(0, 0, 0);
+	padding: 10px;
+}
+
+.jaunumuTabula {
+	height: auto;
+	width: 450px;
+	background-color: rgba(206, 205, 205, 0.719);
+	border-color: black;
+	border-radius: 15px;
+}
+
+.apaksa {
+	right: 5px;
+	border-style: solid;
+	margin-top: px;
+	margin-right: -5px;
+	height: 31px;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	border-color: #b2dcd9;
+	background-color: #b2dcd9;
+}
+
+.nosaukums {
+	margin-top: 5px;
+	margin-left: 15px;
+}
+
+.talr {
+	margin-top: -38px;
+	margin-left: 89%;
+}
+
+.sakums {
+	background-color: #ddd;
+}
+
+.jaunumuapraksts {
+	padding: 10px;
+	text-align: center;
+	font-family: sans-serif;
+}
+
+.virsraksts {
+	text-align: center;
+	margin-top: -20px;
+}
+
+.dark .courses a {
+	color: #fff;
+}
