@@ -1,12 +1,12 @@
 [tool.poetry]
-name = "repl_python3_ShimmeringGreenyellowCalculators"
+name = "repl_python3_medicina"
 version = "0.1.0"
 description = ""
-authors = ["Your Name <you@example.com>"]
+authors = ["dp3ETorsters <<>>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-flask = "^1.1.2"
+flask = "^2.0.1"
 
 [tool.poetry.dev-dependencies]
 

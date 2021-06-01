@@ -57,9 +57,9 @@ function PievienotSlimnīcu() {
 	for (let i = 0; i < SlimnīcuSaraksts.length; i++) {
 		let saraksts = `
 	<div class = 'pievienot2'>
-		<a href="/ārsti/index.html"><img src='${SlimnīcuSaraksts[i].SlimnīcasBilde}' class= 'bilde' onclick = 'slimnicas(this)'></a>
+		<a href="/arsti"><img src='${SlimnīcuSaraksts[i].SlimnīcasBilde}' class= 'bilde' onclick = 'slimnicas(this)'></a>
 		<h2 class='slimnicasvirsraksts'>${SlimnīcuSaraksts[i].SlimnīcasNosaukums}</h2>
-		<img src="/Slimnīcas/bildes/close.png" class = "close" onclick='removeBook("${SlimnīcuSaraksts[i].SlimnīcasNosaukums}")'>
+		<img src="/static/img/close.png" class = "close" onclick='removeBook("${SlimnīcuSaraksts[i].SlimnīcasNosaukums}")'>
 	</div>
 	`;
 		pievienot.innerHTML += saraksts;

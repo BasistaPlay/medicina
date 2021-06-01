@@ -40,7 +40,7 @@ function PievienoAprakstu() {
 		}${ĀrstuSaraksts[i].Nestrada7}</p>
             </a>
             <button id="Pierakstīties">Pierakstīties</button>
-            <img src="/Slimnīcas/bildes/close.png" class = "close2")>
+            <img src="/static/img/close.png" class = "close2")>
     </div>
 	`;
 		Apraksts.innerHTML += ArstiemApraksts;

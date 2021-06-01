@@ -215,7 +215,7 @@ function render() {
 		<img src='${ĀrstuSaraksts[i].ArstaBilde}' class= 'ArstaBilde' onclick = 'ParadaAprakstu(this)'>
 		<h2 class='vards'>${ĀrstuSaraksts[i].ArstaVards}</h2>
         <h3 class='Profesija'>${ĀrstuSaraksts[i].Profesija}</h3>
-		<img src="/Slimnīcas/bildes/close.png" class = "close" onclick='remove("${ĀrstuSaraksts[i].ArstaVards}")'>
+		<img src="/static/img/close.png" class = "close" onclick='remove("${ĀrstuSaraksts[i].ArstaVards}")'>
 	</div>
 	`;
 		pievienotArstu.innerHTML += sarakstsĀrstu;

@@ -3,21 +3,25 @@ app = Flask('app')
 
 
 @app.route('/')
-def Sākums():
-  return render_template("Sakums.html")
+def Sakums():
+  return render_template("sakums.html")
 
 
-@app.route('/Slimnicas')
-def Slimnīcas():
-  return render_template("Slimnicas.html")
+@app.route('/slimnicas')
+def slimnicas():
+  return render_template("slimnicas.html")
 
-@app.route('/Pacientiem')
-def Pacientiem():
-  return render_template("Pacientiem.html")
+@app.route('/pacientiem')
+def pacientiem():
+  return render_template("pacientiem.html")
 
-@app.route('/Kontakti')
+@app.route('/kontakti')
 def Kontakti():
-  return render_template("Kontakti.html")
+  return render_template("kontakti.html")
+
+@app.route('/arsti')
+def arsti():
+  return render_template("arsti.html")
 
 
 app.run(host='0.0.0.0', port=8080)
