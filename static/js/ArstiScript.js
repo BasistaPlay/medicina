@@ -1,12 +1,14 @@
 const logs2 = document.getElementById('logs2');
 const plus2 = document.getElementById('plus');
-let wraper = document.querySelector('#pievienot');
-let ĀrstuSaraksts = [];
 
 window.addEventListener('load', () => {
-	ĀrstuSaraksts = JSON.parse(localStorage.getItem('ĀrstuSaraksts') || '[]');
+	index2 = JSON.parse(localStorage.getItem('saraksts'));
+	ĀrstuSaraksts = JSON.parse(
+		localStorage.getItem('ĀrstuSaraksts' + index2) || '[]'
+	);
 	render();
 });
+index2 = JSON.parse(localStorage.getItem('saraksts'));
 
 plus2.addEventListener('click', () => {
 	logs2.style.display = 'block';
@@ -197,12 +199,12 @@ document.getElementById('poga').addEventListener('click', () => {
 });
 
 document.querySelector('#ArstaBilde').addEventListener('change', function () {
-	const reader = new FileReader();
+	const reader2 = new FileReader();
 
-	reader.addEventListener('load', () => {
-		ĀrstuSaraksts.file = reader.result;
+	reader2.addEventListener('load', () => {
+		ĀrstuSaraksts.file = reader2.result;
 	});
-	reader.readAsDataURL(this.files[0]);
+	reader2.readAsDataURL(this.files[0]);
 });
 
 function render() {
@@ -220,7 +222,7 @@ function render() {
 	`;
 		pievienotArstu.innerHTML += sarakstsĀrstu;
 	}
-	localStorage.setItem('ĀrstuSaraksts', JSON.stringify(ĀrstuSaraksts));
+	localStorage.setItem('ĀrstuSaraksts' + index2, JSON.stringify(ĀrstuSaraksts));
 }
 
 function remove(sarakstsĀrstu) {
@@ -235,10 +237,10 @@ function remove(sarakstsĀrstu) {
 		return e != null;
 	});
 
-	localStorage.setItem('ĀrstuSaraksts', JSON.stringify(ĀrstuSaraksts));
+	localStorage.setItem('ĀrstuSaraksts' + index2, JSON.stringify(ĀrstuSaraksts));
 	render();
 
-	localStorage.setItem('ĀrstuApraksts', JSON.stringify(ĀrstuSaraksts));
+	localStorage.setItem('ĀrstuApraksts' + index2, JSON.stringify(ĀrstuSaraksts));
 	render();
 }
 

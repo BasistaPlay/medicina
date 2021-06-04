@@ -126,3 +126,43 @@ body {
 .dark .courses a {
 	color: #fff;
 }
+
+.GalvenaBilde {
+	width: 750px;
+	margin-left: 800px;
+	margin-top: -550px;
+	position: absolute;
+}
+
+.bilde1 {
+	margin-left: 700px;
+	margin-top: -380px;
+	width: 100px;
+	position: absolute;
+	width: 300px;
+}
+.bilde2 {
+	margin-left: 1020px;
+	margin-top: -250px;
+	width: 100px;
+	position: absolute;
+	width: 300px;
+}
+
+.bilde3 {
+	margin-left: 1340px;
+	margin-top: -380px;
+	width: 100px;
+	position: absolute;
+	width: 300px;
+}
+
+.bilde1:hover {
+	border: 1px solid #fff;
+}
+.bilde2:hover {
+	border: 1px solid #fff;
+}
+.bilde3:hover {
+	border: 1px solid #fff;
+}

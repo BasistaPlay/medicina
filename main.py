@@ -19,7 +19,7 @@ def pacientiem():
 def Kontakti():
   return render_template("kontakti.html")
 
-@app.route('/arsti')
+@app.route('/slimnicas/arsti')
 def arsti():
   return render_template("arsti.html")
 

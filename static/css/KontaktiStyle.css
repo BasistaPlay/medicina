@@ -95,37 +95,36 @@ body {
 	background-color: #ddd;
 }
 
-.Palīdzībasnodaļa {
-	padding: 20px;
-	margin-left: 200px;
-	margin-top: 100px;
+.palidziba{
+  margin-top:150px;
+  margin-left: 100px;
 }
 
-.Traumpunkts {
-	margin-left: 250px;
+.konsultacijas{
+   margin-left: 100px;
 }
-.Uzziņas {
-	margin-left: 250px;
+.filiale{
+  margin-left: 100px;
 }
-.Uzņemšana {
-	margin-left: 250px;
+
+.border{
+background-color: #fff;
+width: 300px;
+height:200px ;
+margin: 5px;
+border: 2px solid red;
+margin-left: 120px;
+margin-top:30px
 }
-.konsultatīvāNodaļa {
-	margin-left: 200px;
-	padding: 20px;
+
+.virsraksts{
+text-align: center;
+color: red;
+
 }
-.Reģistratūra {
-	margin-left: 250px;
-}
-.Aprūpesmājās {
-	margin-left: 250px;
-}
-.Filiāles {
-	margin-left: 215px;
-}
-.Zobārstniecība {
-	margin-left: 250px;
-}
-.Tuberkuloze {
-	margin-left: 250px;
+
+.teksts{
+color: grey;
+text-align: center;
+margin: 20px;
 }

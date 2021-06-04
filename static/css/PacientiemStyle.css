@@ -93,3 +93,55 @@ body {
 .pacientiem {
 	background-color: #ddd;
 }
+
+.eparaksts {
+	margin-top: 150px;
+	margin-left: 70px;
+	width: 400px;
+}
+.punkti {
+	margin-left: 30px;
+}
+.virsraksts {
+	margin-left: 55px;
+	font-size: 20px;
+}
+.border {
+	border: #c4c4c4;
+	background-color: #c4c4c4;
+	width: 1200px;
+	height: 250px;
+	border-radius: 10px;
+	margin: 10px;
+	margin-top: 30px;
+}
+
+.info {
+}
+.virsraksts2 {
+	margin: 10px;
+	padding: 15px;
+	margin-bottom: -5px;
+}
+
+.teksts {
+	margin-left: 24px;
+}
+
+.border2 {
+	margin-left: 1400px;
+	margin-top: -600px;
+	background-color: #efe8c4;
+	width: 399px;
+	border-radius: 15px;
+	height: 500px;
+}
+.bildee {
+	border-radius: 15px 15px 0px 0px;
+}
+
+.text3 {
+	font-size: 20px;
+	margin: 20px;
+	text-align: center;
+}

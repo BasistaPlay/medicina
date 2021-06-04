@@ -1,7 +1,11 @@
 let ĀrstuApraksts = [];
 
+index2 = JSON.parse(localStorage.getItem('saraksts'));
+
 window.addEventListener('load', () => {
-	ĀrstuApraksts = JSON.parse(localStorage.getItem('ĀrstuSaraksts') || '[]');
+	ĀrstuApraksts = JSON.parse(
+		localStorage.getItem('ĀrstuApraksts' + index2) || '[]'
+	);
 	PievienoAprakstu();
 });
 
@@ -53,5 +57,5 @@ function PievienoAprakstu() {
 		};
 	}
 
-	localStorage.setItem('ĀrstuApraksts', JSON.stringify(ĀrstuSaraksts));
+	localStorage.setItem('ĀrstuApraksts' + index2, JSON.stringify(ĀrstuSaraksts));
 }

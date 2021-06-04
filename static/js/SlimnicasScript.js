@@ -1,7 +1,5 @@
 const logs = document.getElementById('logs');
 const plus = document.getElementById('plus');
-let wraper = document.querySelector('#pievienot2');
-saraksts = [];
 
 window.addEventListener('load', () => {
 	SlimnīcuSaraksts = JSON.parse(
@@ -57,9 +55,9 @@ function PievienotSlimnīcu() {
 	for (let i = 0; i < SlimnīcuSaraksts.length; i++) {
 		let saraksts = `
 	<div class = 'pievienot2'>
-		<a href="/arsti"><img src='${SlimnīcuSaraksts[i].SlimnīcasBilde}' class= 'bilde' onclick = 'slimnicas(this)'></a>
+		<a href="/slimnicas/arsti"><img src='${SlimnīcuSaraksts[i].SlimnīcasBilde}' class= 'bilde' onclick = 'slimnicas(this)'></a>
 		<h2 class='slimnicasvirsraksts'>${SlimnīcuSaraksts[i].SlimnīcasNosaukums}</h2>
-		<img src="/static/img/close.png" class = "close" onclick='removeBook("${SlimnīcuSaraksts[i].SlimnīcasNosaukums}")'>
+		<img src="/static/img/close.png" class = "close" onclick='removeBook("${SlimnīcuSaraksts[i].SlimnīcasNosaukums}");'>
 	</div>
 	`;
 		pievienot.innerHTML += saraksts;
@@ -70,10 +68,11 @@ function PievienotSlimnīcu() {
 function removeBook(saraksts) {
 	for (let i = 0; i < SlimnīcuSaraksts.length; i++) {
 		if (saraksts === SlimnīcuSaraksts[i].SlimnīcasNosaukums) {
+			localStorage.removeItem('ĀrstuSaraksts' + i);
+      localStorage.removeItem('ĀrstuApraksts' + i);
 			delete SlimnīcuSaraksts[i];
 			break;
 		}
-		localStorage.removeItem('ĀrstuSaraksts0');
 	}
 	SlimnīcuSaraksts = SlimnīcuSaraksts.filter(function (e) {
 		return e != null;
@@ -81,4 +80,13 @@ function removeBook(saraksts) {
 
 	localStorage.setItem('SlimnīcuSaraksts', JSON.stringify(SlimnīcuSaraksts));
 	PievienotSlimnīcu();
+}
+
+function slimnicas(saraksts) {
+	localStorage.removeItem('saraksts');
+	var divs2 = document.querySelectorAll('.bilde');
+	index2 = Array.from(divs2).lastIndexOf(saraksts);
+	localStorage.setItem('saraksts', JSON.stringify(index2));
+  localStorage.setItem('ĀrstuSaraksts' + index2)
+	localStorage.setItem('ĀrstuApraksts' + index2)
 }
