@@ -1,147 +1,72 @@
-body {
-	background-color: #75abfb;
-}
-
-.logo {
-	height: 90%;
-	margin-top: 30px;
-	margin-left: 50px;
-}
-
-.menu {
-	display: block;
-	background: rgb(10, 218, 44);
-	background: linear-gradient(
-		0deg,
-		rgba(255, 255, 255, 1) 0%,
-		rgba(255, 0, 0, 1) 100%
-	);
-	overflow: hidden;
-	width: 717px;
-	height: 44px;
-	position: absolute;
-	margin-left: 350px;
-	margin-top: -140px;
-}
-
-.menu a {
-	float: left;
-	color: #000000;
-	text-align: center;
-	padding: 12px 50px;
-	text-decoration: none;
-	font-size: 18px;
-	font-family: Andale Mono, monospace;
-}
-
-.menu a:hover {
-	background: rgb(255, 255, 255);
-	background: linear-gradient(
-		0deg,
-		rgba(255, 255, 255, 1) 0%,
-		rgba(97, 243, 255, 1) 92%,
-		rgba(0, 236, 255, 1) 100%
-	);
-	color: black;
-}
-
-.meklet {
-	margin-left: 1200px;
-	margin-top: -128px;
-}
-
-.meklēšanasAile {
-	width: 350px;
-	height: 23px;
-}
-
-.MeklešanasPoga {
-	width: 15px;
-	height: 15px;
-}
-
-.Ieiet {
-	display: block;
-	margin-top: -35px;
-	margin-left: 1700px;
-	width: 150px;
-	height: 40px;
-	border-radius: 5px;
-}
-.apaksa {
-	right: 5px;
-	border-style: solid;
-	margin-top: 20px;
-	margin-right: -5px;
-	height: 31px;
-	width: 100%;
-	position: fixed;
-	bottom: 0;
-	border-color: #b2dcd9;
-	background-color: #b2dcd9;
-}
-
-.nosaukums {
-	margin-top: 5px;
-	margin-left: 15px;
-}
-
-.talr {
-	margin-top: -38px;
-	margin-left: 89%;
-}
 .pacientiem {
-	background-color: #ddd;
+  background-color: #ddd;
 }
 
 .eparaksts {
-	margin-top: 150px;
-	margin-left: 70px;
-	width: 400px;
+  margin-top: 30px;
+  margin-left: 20px;
+  width: 400px;
 }
 .punkti {
-	margin-left: 30px;
+  margin-left: 30px;
 }
 .virsraksts {
-	margin-left: 55px;
-	font-size: 20px;
+  margin-left: 55px;
+  font-size: 20px;
 }
 .border {
-	border: #c4c4c4;
-	background-color: #c4c4c4;
-	width: 1200px;
-	height: 250px;
-	border-radius: 10px;
-	margin: 10px;
-	margin-top: 30px;
+  border: #c4c4c4;
+  background-color: #c4c4c4;
+  width: 1200px;
+  height: 250px;
+  border-radius: 10px;
+  margin: 10px;
+  margin-top: -280px;
 }
 
 .info {
 }
 .virsraksts2 {
-	margin: 10px;
-	padding: 15px;
-	margin-bottom: -5px;
+  margin: 10px;
+  padding: 15px;
+  margin-bottom: -5px;
 }
 
 .teksts {
-	margin-left: 24px;
+  margin-left: 24px;
 }
 
 .border2 {
-	margin-left: 1400px;
-	margin-top: -600px;
-	background-color: #efe8c4;
-	width: 399px;
-	border-radius: 15px;
-	height: 500px;
+  margin-left: 1400px;
+  margin-top: -560px;
+  background-color: #efe8c4;
+  width: 399px;
+  border-radius: 15px;
+  height: 500px;
 }
 .bildee {
-	border-radius: 15px 15px 0px 0px;
+  border-radius: 15px 15px 0px 0px;
 }
 
 .text3 {
-	font-size: 20px;
-	margin: 20px;
-	text-align: center;
+  font-size: 20px;
+  margin: 20px;
+  text-align: center;
+}
+
+.informācija {
+  border: #ffffff;
+  background-color: #ffffff;
+  margin-top: 170px;
+  margin-left: -30px;
+  width: 1300px;
+  height: 620px;
+  border-radius: 15px;
+}
+
+.bilde_arsti {
+  display: list-item;
+  width: 300px;
+  margin-top: -289px;
+  margin-left: 900px;
 }

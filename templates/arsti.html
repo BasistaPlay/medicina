@@ -1,115 +1,86 @@
-<!DOCTYPE html>
-<html lang="lv">
+{% extends 'kopigs.html' %}
 
-<head>
-    <link rel="stylesheet" href="/static/css/ĀrstiStyle.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=chrome">
-    <meta name="medicīna" content="medicīna">
-    <title>Ārsti</title>
-    <link rel="icon" href="/static/img/logo2.png">
-</head>
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/ĀrstiStyle.css') }}">
+{% endblock %}
 
-<body>
-    <div>
+{% block title %}
+{{slimnica.nosuakums}}
+{% endblock %}
 
-        <img src="/static/img/logo.png" class="logo">
-
-        <div class="menu">
-            <a class="sakums" href="/">Sākums</a>
-            <a class="slimnicas" href="/slimnicas">Slimnīca</a>
-            <a class="pacientiem" href="/pacientiem">Pacientiem</a>
-            <a class="Kontakti" href="/kontakti">Kontakti</a>
-        </div>
-
-        <div class="meklet">
-            <input type="text" class="meklēšanasAile" placeholder="Meklēt....">
-            <button type="submit" class="MeklešanasPoga"></button>
-        </div>
-        <div>
-            <button class="Ieiet">Ieiet</button>
-        </div>
-    </div>
-
+{% block body %}
     <div id="logs2">
-        <h2 class="virsraksts">Pievienot Ārstu</h2>
-        <input placeholder="Arsta vārds un uzvārds" type="text" id="arstavards">
-        <input placeholder="Kas pa ārstu" type="text" id="arstaprofesija">
-        <h2 class="DarbaLaiks">Darba laiks:</h2>
-        <h3 class="nestrada">Nestrādā</h3>
-        <p>
-            Pirmdienas:
-            <input type="time" id="Pirmdienas">
-            <a>-</a>
-            <input type="time" id="Pirmdienas2">
-            <input type="checkbox" id="Nestrada1" name='nestrāda' Uncheck>
-        </p>
-        <p>
-            otradienas:
-            <input type="time" id="otradienas" name="otradienas">
-            <a>-</a>
-            <input type="time" id="otradienas2" name="otradienas2">
-            <input type="checkbox" id="Nestrada2" name='nestrāda'>
-        </p>
-        <p>
-            trešdienas:
-            <input type="time" id="tresdienas" name="tresdienas">
-            <a>-</a>
-            <input type="time" id="tresdienas2" name="tresdienas">
-            <input type="checkbox" id="Nestrada3" name='nestrāda'>
-        </p>
-        <p>
-            ceturdienas:
-            <input type="time" id="ceturdienas" name="ceturdienas">
-            <a>-</a>
-            <input type="time" id="ceturdienas2" name="ceturdienas2">
-            <input type="checkbox" id="Nestrada4" name='nestrāda'>
-        </p>
-        <p>
-            piekdienas:
-            <input type="time" id="piekdienas" name="piekdienas">
-            <a>-</a>
-            <input type="time" id="piekdienas2" name="piekdienas2">
-            <input type="checkbox" id="Nestrada5" name='nestrāda'>
-        </p>
-        <p>
-            sestdienas:
-            <input type="time" id="sestdienas">
-            <a>-</a>
-            <input type="time" id="sestdienas2" name="sestdienas2">
-            <input type="checkbox" id="Nestrada6" name='nestrāda'>
-        </p>
-        <p>
-            svētdienas:
-            <input type="time" id="svētdienas" name="svētdienas">
-            <a>-</a>
-            <input type="time" id="svētdienas2" name="svētdienas2">
-            <input type="checkbox" id="Nestrada7" name='nestrāda'>
-        </p>
-        <input type="file" id="ArstaBilde" accept="image/png, image/jpeg">
-        <button id="poga">Pievienot ārstu</button>
+
+      <h2 class="virsraksts">Pievienot Ārstu</h2>
+      <input placeholder="Arsta vārds un uzvārds" type="text" id="arstavards" />
+      <input placeholder="Kas pa ārstu" type="text" id="arstaprofesija" />
+      <h2 class="DarbaLaiks">Darba laiks:</h2>
+      <h3 class="nestrada">Nestrādā</h3>
+      <p>
+        Pirmdienas:
+        <input type="time" id="Pirmdienas" />
+        <a>-</a>
+        <input type="time" id="Pirmdienas2" />
+        <input type="checkbox" id="Nestrada1" name="nestrāda" Uncheck />
+      </p>
+      <p>
+        otradienas:
+        <input type="time" id="otradienas" name="otradienas" />
+        <a>-</a>
+        <input type="time" id="otradienas2" name="otradienas2" />
+        <input type="checkbox" id="Nestrada2" name="nestrāda" />
+      </p>
+      <p>
+        trešdienas:
+        <input type="time" id="tresdienas" name="tresdienas" />
+        <a>-</a>
+        <input type="time" id="tresdienas2" name="tresdienas" />
+        <input type="checkbox" id="Nestrada3" name="nestrāda" />
+      </p>
+      <p>
+        ceturdienas:
+        <input type="time" id="ceturdienas" name="ceturdienas" />
+        <a>-</a>
+        <input type="time" id="ceturdienas2" name="ceturdienas2" />
+        <input type="checkbox" id="Nestrada4" name="nestrāda" />
+      </p>
+      <p>
+        piekdienas:
+        <input type="time" id="piekdienas" name="piekdienas" />
+        <a>-</a>
+        <input type="time" id="piekdienas2" name="piekdienas2" />
+        <input type="checkbox" id="Nestrada5" name="nestrāda" />
+      </p>
+      <p>
+        sestdienas:
+        <input type="time" id="sestdienas" />
+        <a>-</a>
+        <input type="time" id="sestdienas2" name="sestdienas2" />
+        <input type="checkbox" id="Nestrada6" name="nestrāda" />
+      </p>
+      <p>
+        svētdienas:
+        <input type="time" id="svētdienas" name="svētdienas" />
+        <a>-</a>
+        <input type="time" id="svētdienas2" name="svētdienas2" />
+        <input type="checkbox" id="Nestrada7" name="nestrāda" />
+      </p>
+      <input type="file" id="ArstaBilde" accept="image/png, image/jpeg" />
+      <button id="poga">Pievienot ārstu</button>
     </div>
     <div id="ArstuPievienosana">
-        <span id="pievienotArstu">
-        </span>
-        <img src="/static/img/+.png" alt="plus" id="plus">
+      <span id="pievienotArstu"> </span>
+      <img src="/static/img/+.png" alt="plus" id="plus" />
     </div>
-    <div id='Apraksts'>
-    </div>
-    <div class=fix></div>
+    <div id="Apraksts"></div>
+    <div class="fix"></div>
+
+    <div id="PieteiktiesPieArsta" class="PieteiktiesPieArsta"></div>
+    {% endblock %}
+
+    {% block js %}
+    <script src="{{url_for('static', filename='js/ArstiScript.js')}}"></script>
+    <script src="{{url_for('static', filename='js/ArstiScript2.js')}}"></script>
+    {% endblock %}
 
 
-    <div class="apaksa">
-        <h3 class="nosaukums">Medicīnas centrs</h3>
-        <h3 class="talr">Talr. +371 26745334</h3>
-    </div>
-
-    <script src="/static/js/ArstiScript.js"></script>
-    <script src="/static/js/ArstiScript2.js"></script>
-    <script src="/static/js/SlimnicasScript2.js"></script>
-
-</body>
-
-
-
-</html>

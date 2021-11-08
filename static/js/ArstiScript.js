@@ -195,6 +195,8 @@ document.getElementById('poga').addEventListener('click', () => {
 		ĀrstuApraksts.push(ĀrstuSaraksts);
 		render();
 		PievienoAprakstu();
+		Pieteikties()
+
 	}
 });
 

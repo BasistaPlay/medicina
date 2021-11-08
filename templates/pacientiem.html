@@ -1,97 +1,64 @@
-<!DOCTYPE html>
-<html lang="lv">
+{% extends 'kopigs.html' %}
 
-<head>
-    <link rel="stylesheet" href="/static/css/PacientiemStyle.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=chrome">
-    <meta name="medicīna" content="medicīna">
-    <title>Pacientiem</title>
-    <link rel="icon" href="/static/img/logo2.png">
-</head>
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/PacientiemStyle.css') }}">
+{% endblock %}
 
-<body>
-    <div>
+{% block title %}
+Pacientiem
+{% endblock %}
 
-        <img src="/static/img/logo.png" class="logo">
-
-        <div class="menu">
-            <a class="sakums" href="/">Sākums</a>
-            <a class="slimnicas" href="/slimnicas">Slimnīca</a>
-            <a class="pacientiem" href="#">Pacientiem</a>
-            <a class="Kontakti" href="/kontakti">Kontakti</a>
-        </div>
-
-        <div class="meklet">
-            <input type="text" class="meklēšanasAile" placeholder="Meklēt....">
-            <button type="submit" class="MeklešanasPoga"></button>
-        </div>
-        <div>
-            <button class="Ieiet">Ieiet</button>
-        </div>
-    </div>
+{% block body %}
     <div class="informācija">
-        <img src="/static/img/e-pierakst.png" class="eparaksts">
-        <h4 class='virsraksts'>
-            Pacienti var pieteikties pie speciālistiem vai uz izmeklējumiem šādos veidos:
-        </h4>
-        <ol class='punkti'>
-            <li>
-                Ierodoties slimnīcas Konsultatīvās nodaļas reģistratūrā darba dienās no plkst. 7.30 – 16.30
-            </li>
-            <h1></h1>
-            <li>
-                Zvanot uz Konsultatīvās nodaļas reģistratūras tālruni: 63403231 darba dienās no plkst. 8.00 – 16.00
-            </li>
-            <h1></h1>
-            <li>
-                Izmantojot e-pieraksta sistēmu jebkurā nedēļas dienā un laikā.
-            </li>
-        </ol>
+      <img src="/static/img/e-pierakst.png" class="eparaksts" />
+      <h4 class="virsraksts">
+        Pacienti var pieteikties pie speciālistiem vai uz izmeklējumiem šādos
+        veidos:
+      </h4>
+      <ol class="punkti">
+        <li>
+          Ierodoties slimnīcas Konsultatīvās nodaļas reģistratūrā darba dienās
+          no plkst. 7.30 – 16.30
+        </li>
+        <h1></h1>
+        <li>
+          Zvanot uz Konsultatīvās nodaļas reģistratūras tālruni: 63403231 darba
+          dienās no plkst. 8.00 – 16.00
+        </li>
+        <h1></h1>
+        <li>Izmantojot e-pieraksta sistēmu jebkurā nedēļas dienā un laikā.</li>
+      </ol>
+      <img src="/static/img/arsti2.png" class="bilde_arsti" />
     </div>
-
     <div class="border">
-        <div class="info">
-            <h3 class='virsraksts2'>Personām ar kustību traucējumiem</h3>
-            <a class='teksts'>
-                Riteņkrēslu un ratiņu lietotājiem paredzētas
-                iespējas ērti iekļūt un pārvietoties slimnīcas teritorijā.
-                Visur ir neslīdoši cietā seguma piebraukšanas celiņi.
-            </a>
-
-        </div>
-        <div class="info2">
-            <h3 class='virsraksts2'>Personām ar redzes vai dzirdes traucējumiem nodrošināta iespēja saņemt nepieciešamo
-                vizuālo informāciju:
-            </h3>
-            <p class='teksts'>
-                Ēku ieejas un telpas aprīkotas ar labi uztveramām norādēm un labi izgaismotu vizuālo informāciju;
-                Kāpņu pirmie un pēdējie pakāpieni marķēti ar spilgtu kontrastējošu dzeltenu 5 cm platu svītru visā kāpņu
-                platumā.
-
-            </p>
-        </div>
+      <div class="info">
+        <h3 class="virsraksts2">Personām ar kustību traucējumiem</h3>
+        <a class="teksts">
+          Riteņkrēslu un ratiņu lietotājiem paredzētas iespējas ērti iekļūt un
+          pārvietoties slimnīcas teritorijā. Visur ir neslīdoši cietā seguma
+          piebraukšanas celiņi.
+        </a>
+      </div>
+      <div class="info2">
+        <h3 class="virsraksts2">
+          Personām ar redzes vai dzirdes traucējumiem nodrošināta iespēja saņemt
+          nepieciešamo vizuālo informāciju:
+        </h3>
+        <p class="teksts">
+          Ēku ieejas un telpas aprīkotas ar labi uztveramām norādēm un labi
+          izgaismotu vizuālo informāciju; Kāpņu pirmie un pēdējie pakāpieni
+          marķēti ar spilgtu kontrastējošu dzeltenu 5 cm platu svītru visā kāpņu
+          platumā.
+        </p>
+      </div>
     </div>
 
     <div class="border2">
-        <img src="/static/img/bilde.png" class="bildee">
-        <p class="text3">
-            Ja pieteiktā vizīte jāatliek,
-            vai kādu iemeslu dēļ vairs nav
-            nepieciešama, lūdzam zvanīt
-            uz Konsultatīvās
-            nodaļas reģistratūras tālruni:
-            63403231 darba dienās
-            no plkst. 8.00 – 16.00
-        </p>
+      <img src="/static/img/bilde.png" class="bildee" />
+      <p class="text3">
+        Ja pieteiktā vizīte jāatliek, vai kādu iemeslu dēļ vairs nav
+        nepieciešama, lūdzam zvanīt uz Konsultatīvās nodaļas reģistratūras
+        tālruni: 63403231 darba dienās no plkst. 8.00 – 16.00
+      </p>
     </div>
-
-    <div class="apaksa">
-        <h3 class="nosaukums">Medicīnas centrs</h3>
-        <h3 class="talr">Talr. +371 26745334</h3>
-    </div>
-</body>
-
-
-
-</html>
+    {% endblock %}

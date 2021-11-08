@@ -16,7 +16,7 @@ function PievienoAprakstu() {
 	for (let i = 0; i < ĀrstuApraksts.length; i++) {
 		let ArstiemApraksts = `
     <div class = 'apraksts' id = '${[i]}' style="display: none">
-    		<img src="${ĀrstuSaraksts[i].ArstaBilde}" alt="bilde" id="aprakstaBilde">
+    		<img src="${ĀrstuSaraksts[i].ArstaBilde}" class ='bildeee' alt="bilde" id="aprakstaBilde" onclick = 'Pieteikt(this)'>
             <h2 id="Vārdsuzvārds">${ĀrstuSaraksts[i].ArstaVards}</h2>
             <h3 id="ĀrstaProfesija">${ĀrstuSaraksts[i].Profesija}</h3>
             <h2 id="DarbaLaiks">Darba Laiks</h2>
@@ -43,7 +43,7 @@ function PievienoAprakstu() {
 			ĀrstuSaraksts[i].svētdienasLīdz
 		}${ĀrstuSaraksts[i].Nestrada7}</p>
             </a>
-            <button id="Pierakstīties">Pierakstīties</button>
+            <button class="Pierakstīties" id="Pierakstīties${[i]}" onclick = 'Pieteikt(this)' >Pierakstīties</button>
             <img src="/static/img/close.png" class = "close2")>
     </div>
 	`;
@@ -57,5 +57,66 @@ function PievienoAprakstu() {
 		};
 	}
 
+	var Pierakstīties = document.getElementsByClassName('Pierakstīties');
+
+	for (i = 0; i < Pierakstīties.length; i++) {
+		Pierakstīties[i].onclick = function () {
+			var div = this.parentElement;
+			div.style.display = 'none';
+		};
+	}
+
 	localStorage.setItem('ĀrstuApraksts' + index2, JSON.stringify(ĀrstuSaraksts));
+	
+}
+
+
+var poogga = document.getElementById("Pierakstīties");
+
+poogga.onclick = function(){
+	console.log("work")
+}
+
+function Pieteikties() {
+	let PieteiktiesPieArsta = document.getElementById('PieteiktiesPieArsta');
+	PieteiktiesPieArsta.innerHTML = '';
+
+	for (let i = 0; i < ĀrstuApraksts.length; i++) {
+		let PierakstipieArsta = `
+	<div class="pierakstities" id='${[i]}'>
+    
+    <h1 class="pierkstvirsraksts">Pierakstīties</h1>
+    <h2 id="pvards">${ĀrstuSaraksts[i].ArstaVards}</h2>
+    <h2 id="pprofesija">${ĀrstuSaraksts[i].Profesija}</h2>
+
+    <input placeholder="Vārds Uzvārds" type="text" id="pacientavards" />
+    <input
+        type="datetime-local"
+        id="meeting-time"
+        name="meeting-time"
+        value="2018-06-12T19:30"
+    />
+    <input
+        type="email"
+        id="email"
+        placeholder="e-pasts"
+        pattern=".+@globex\.com"
+        size="30"
+        required
+    />
+    <div>
+    <button id="poga2">Pierakstīties</button>
+    </div
+    </div>
+	`;
+	PieteiktiesPieArsta.innerHTML += PierakstipieArsta;
+	}
+	localStorage.setItem('ArstuPieraksts' + index2, JSON.stringify(ĀrstuSaraksts));
+}
+
+function Pieteikt(PieteiktiesPieArsta) {
+	console.log("index1")
+	var divs1 = document.querySelectorAll('.Pierakstīties');
+	var index1 = Array.from(divs1).indexOf(PierakstipieArsta);
+	document.getElementsByid(index1).style.display = 'flex';
 }

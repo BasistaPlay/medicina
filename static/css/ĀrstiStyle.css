@@ -1,313 +1,368 @@
 body {
-	background-color: #75abfb;
+  background-color: #75abfb;
 }
 
 .logo {
-	height: 90%;
-	margin-top: 30px;
-	margin-left: 50px;
+  height: 90%;
+  margin-top: 30px;
+  margin-left: 50px;
 }
 
 .menu {
-	display: block;
-	background: rgb(10, 218, 44);
-	background: linear-gradient(
-		0deg,
-		rgba(255, 255, 255, 1) 0%,
-		rgba(255, 0, 0, 1) 100%
-	);
-	overflow: hidden;
-	width: 717px;
-	height: 44px;
-	position: absolute;
-	margin-left: 350px;
-	margin-top: -140px;
+  display: block;
+  background: rgb(10, 218, 44);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 0, 0, 1) 100%
+  );
+  overflow: hidden;
+  width: 717px;
+  height: 44px;
+  position: absolute;
+  margin-left: 350px;
+  margin-top: -140px;
 }
 
 .menu a {
-	float: left;
-	color: #000000;
-	text-align: center;
-	padding: 12px 50px;
-	text-decoration: none;
-	font-size: 18px;
-	font-family:Andale Mono, monospace ;
+  float: left;
+  color: #000000;
+  text-align: center;
+  padding: 12px 50px;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: Andale Mono, monospace;
 }
 
 .menu a:hover {
-	background: rgb(255,255,255);
-	background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(97,243,255,1) 92%, rgba(0,236,255,1) 100%);
-	color: black;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(97, 243, 255, 1) 92%,
+    rgba(0, 236, 255, 1) 100%
+  );
+  color: black;
 }
 
 .meklet {
-	margin-left: 1200px;
-	margin-top: -128px;
+  margin-left: 1200px;
+  margin-top: -128px;
 }
 
 .meklēšanasAile {
-	width: 350px;
-	height: 23px;
+  width: 350px;
+  height: 23px;
 }
 
 .MeklešanasPoga {
-	width: 15px;
-	height: 15px;
+  width: 15px;
+  height: 15px;
 }
 
 .Ieiet {
-	display: block;
-	margin-top: -35px;
-	margin-left: 1700px;
-	width: 150px;
-	height: 40px;
-	border-radius: 5px;
+  display: block;
+  margin-top: -35px;
+  margin-left: 1700px;
+  width: 150px;
+  height: 40px;
+  border-radius: 5px;
 }
 .apaksa {
-	right: 5px;
-	border-style: solid;
-	margin-top: 20px;
-	margin-right: -5px;
-	height: 31px;
-	width: 100%;
-	position: fixed;
-	bottom: 0;
-	border-color: #b2dcd9;
-	background-color: #b2dcd9;
+  right: 5px;
+  border-style: solid;
+  margin-top: 20px;
+  margin-right: -5px;
+  height: 31px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  border-color: #b2dcd9;
+  background-color: #b2dcd9;
 }
 
 .nosaukums {
-	margin-top: 5px;
-	margin-left: 15px;
+  margin-top: 5px;
+  margin-left: 15px;
 }
 
 .talr {
-	margin-top: -38px;
-	margin-left: 89%;
+  margin-top: -38px;
+  margin-left: 89%;
 }
 
 .slimnicas {
-	background-color: #ddd;
+  background-color: #ddd;
 }
 
 #logs2 {
-	display: none;
-	position: absolute;
-	top: 56.2%;
-	left: 50%;
-	background: rgb(255, 0, 187);
-	width: 300px;
-	margin: -320px 0 0 -160px;
-	padding: 45px;
-	box-shadow: 0 0 3px rgb(255, 0, 0);
-	margin-bottom:15px;
-	margin-right 10px;
+  display: none;
+  position: absolute;
+  top: 56.2%;
+  left: 50%;
+  background: rgb(26, 10, 255);
+  width: 380px;
+  margin: -320px 0 0 -160px;
+  padding: 45px;
+  box-shadow: 0 0 3px rgb(255, 0, 0);
+  margin-bottom: 15px;
+  margin-right: 10px;
 }
 
 .virsraksts {
-	margin-top: -35px;
-	margin-left: 50px;
+  margin-top: -35px;
+  margin-left: 100px;
 }
 
 #ArstaBilde {
-	margin-top: 10px;
-	
+  margin-top: 10px;
 }
 #poga {
-	margin-left: 100px;
-	margin-top: 20px;
+  margin-left: 100px;
+  margin-top: 20px;
 }
 
-#arstavards{
-	width: 290px;
-	text-align: center;
+#arstavards {
+  width: 290px;
+  text-align: center;
+  margin-left: 35px;
 }
 
-#arstaprofesija{
-	width: 290px;
-	margin-top: 5px;
-	text-align: center;
+#arstaprofesija {
+  width: 290px;
+  margin-top: 5px;
+  text-align: center;
+  margin-left: 35px;
 }
 
 p {
-	margin-bottom: -10px;
+  margin-bottom: -10px;
 }
 
-
-
-#Pirmdienas{
-	margin-left: 10px;
+#Pirmdienas {
+  margin-left: 10px;
 }
-#otradienas{
-	margin-left: 15px;
+#otradienas {
+  margin-left: 15px;
 }
-#tresdienas{
-	margin-left: 16.1px;
+#tresdienas {
+  margin-left: 16.1px;
 }
-#ceturdienas{
-	margin-left: 8px;
+#ceturdienas {
+  margin-left: 8px;
 }
-#piekdienas{
-	margin-left: 12px;
+#piekdienas {
+  margin-left: 12px;
 }
-#sestdienas{
-	margin-left: 16px;
+#sestdienas {
+  margin-left: 16px;
 }
-#svētdienas{
-	margin-left: 14px;
+#svētdienas {
+  margin-left: 14px;
 }
-#ArstaBilde{
-	margin-top:30px;
+#ArstaBilde {
+  margin-top: 30px;
 }
 
-.DarbaLaiks{
-	margin-top:15px;
-	margin-left: 105px;
+.DarbaLaiks {
+  margin-top: 15px;
+  margin-left: 130px;
 }
 #plus {
-	display: inline-flex;
-	flex-direction: column;
-	width: 90px;
-	margin-left: 100px;
-	margin-top: 200px;
-	cursor: pointer;
-	position: fixed;
+  display: inline-flex;
+  flex-direction: column;
+  width: 90px;
+  margin-left: 100px;
+  margin-top: 200px;
+  cursor: pointer;
+  position: fixed;
 }
 
-.ArstaBilde{
-	width: 210px;
-	height: 280px;
+.ArstaBilde {
+  width: 210px;
+  height: 280px;
 }
 
-.pievienotArstu{
-display: inline-flex;
-flex-direction: column;
-width: 210px;
-height: auto;
-cursor: pointer;
-padding: 40px;
-margin: 22px;
-margin-top: 90px;
+.pievienotArstu {
+  display: inline-flex;
+  flex-direction: column;
+  width: 210px;
+  height: auto;
+  cursor: pointer;
+  padding: 40px;
+  margin: 22px;
+  margin-top: 90px;
 }
 
-.vards{
-text-align: center;
-margin-top: -1px;
+.vards {
+  text-align: center;
+  margin-top: -1px;
 }
 
-.Profesija{
-
-	text-align: center;
-	margin-top: -20px;
+.Profesija {
+  text-align: center;
+  margin-top: -20px;
 }
-.close{
-	width: 30px;
-	margin-top:-345px;
-	margin-left:180px;
+.close {
+  width: 30px;
+  margin-top: -345px;
+  margin-left: 180px;
 }
 .pievienot {
-	display: inline-flex;
-	flex-direction: column;
-	width: 300px;
-	height: auto;
-	cursor: pointer;
-	padding: 28px;
-	margin: 10px;
+  display: inline-flex;
+  flex-direction: column;
+  width: 300px;
+  height: auto;
+  cursor: pointer;
+  padding: 28px;
+  margin: 10px;
 }
 
-.fix{
-	height: 100px;
+.fix {
+  height: 100px;
 }
 
-.apraksts{
-	background-color:rgb(5, 122, 255);
-	box-shadow: 0 0 3px rgb(255, 0, 0);
-	width: 800px;
-	height: 400px;
-	margin-top: -250px;
-	margin-left: 650px;
-	position: fixed;
-	border-radius: 10px;
-	position: fixed;
-
+.apraksts {
+  background-color: rgb(5, 122, 255);
+  box-shadow: 0 0 3px rgb(255, 0, 0);
+  width: 800px;
+  height: 400px;
+  margin-top: -250px;
+  margin-left: 650px;
+  position: fixed;
+  border-radius: 10px;
+  position: fixed;
 }
-#aprakstaBilde{
-	width: 210px;
-	height: 280px;
-	margin-left: 20px;
-	margin-top: 15px;
-	border-radius: 10px;
-	position: absolute;
-	display: flex;
-	position: fixed;
+#aprakstaBilde {
+  width: 210px;
+  height: 280px;
+  margin-left: 20px;
+  margin-top: 15px;
+  border-radius: 10px;
+  position: absolute;
+  display: flex;
+  position: fixed;
 }
-#Vārdsuzvārds{
-	margin-left: 270px;
-	margin-top: 50px;
-	position: fixed;
-}
-
-#ĀrstaProfesija{
-	margin-left: 272px;
-	margin-top: 75px;
-	position: fixed;
-}
-#DarbaLaiks{
-	margin-top: 40px;
-	margin-left: 560px;
-	width: 1000px;
-	position: fixed;
-	color:rgb(255, 255, 255)
-
+#Vārdsuzvārds {
+  margin-left: 270px;
+  margin-top: 50px;
+  position: fixed;
 }
 
-#laiki{
-	text-align: center;
-	position: absolute;
-	margin-left: 500px;
-	margin-top: 75px;
-	font-size: 18px;
-	width: 250px;
-	height: 260px;
-	border-radius: 10px;
-	position: fixed;
-	background-color:rgb(188, 243, 209)
-
+#ĀrstaProfesija {
+  margin-left: 272px;
+  margin-top: 75px;
+  position: fixed;
 }
-#Pierakstīties{
-	margin-left: 270px;
-	margin-top: 150px;
-	border-radius: 5px;
-	width: 130px;
-	height: 30px;
-	background-color:red;
-	color: rgb(255, 255, 255);
-	font-family: cursive;
-	font-size: 16px;
-	cursor: pointer;
-	position: fixed;
-
-}
-.close2{
-	width: 30px;
-	margin-top:5px;
-	margin-left:765px;
-	display: flex;
-	cursor: pointer;
-	position: fixed;
-
+#DarbaLaiks {
+  margin-top: 40px;
+  margin-left: 560px;
+  width: 1000px;
+  position: fixed;
+  color: rgb(255, 255, 255);
 }
 
-input[type=checkbox]{
-	margin-left: 25px;
+#laiki {
+  text-align: center;
+  position: absolute;
+  margin-left: 500px;
+  margin-top: 75px;
+  font-size: 18px;
+  width: 250px;
+  height: 260px;
+  border-radius: 10px;
+  position: fixed;
+  background-color: rgb(188, 243, 209);
+}
+.Pierakstīties {
+  margin-left: 270px;
+  margin-top: 150px;
+  border-radius: 5px;
+  width: 130px;
+  height: 30px;
+  background-color: red;
+  color: rgb(255, 255, 255);
+  font-family: cursive;
+  font-size: 16px;
+  cursor: pointer;
+  position: fixed;
+}
+.close2 {
+  width: 30px;
+  margin-top: 5px;
+  margin-left: 765px;
+  display: flex;
+  cursor: pointer;
+  position: fixed;
 }
 
-.nestrada{
-	display:block;
-	margin-left: 250px;
-
+input[type="checkbox"] {
+  margin-left: 40px;
 }
 
-.border{
-	background-color:#ddd
+.nestrada {
+  display: block;
+  margin-left: 325px;
+}
+
+.border {
+  background-color: #ddd;
+}
+
+.pierakstities {
+  display: none;
+  margin-left: 755px;
+  margin-top: -300px;
+  border-radius: 5px;
+  width: 550px;
+  height: 300px;
+  background-color: rgb(255, 35, 35);
+  color: rgb(255, 255, 255);
+  font-family: cursive;
+  font-size: 16px;
+  position: fixed;
+}
+.pierkstvirsraksts {
+  margin-top: 0px;
+  margin-left: 170px;
+}
+#pacientavards {
+  width: 300px;
+  text-align: center;
+  margin-left: 120px;
+}
+#meeting-time {
+  width: 300px;
+  text-align: center;
+  margin-left: 120px;
+  margin-top: 10px;
+}
+#email {
+  width: 300px;
+  text-align: center;
+  margin-left: 120px;
+  margin-top: 10px;
+}
+#poga2 {
+  margin-top: 15px;
+  margin-left: 200px;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#pvards {
+  margin-left: 195px;
+  margin-top: -20px;
+}
+#pprofesija {
+  margin-left: 215px;
+  margin-top: -20px;
 }

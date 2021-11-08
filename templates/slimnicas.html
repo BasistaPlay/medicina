@@ -1,66 +1,51 @@
-<!DOCTYPE html>
-<html lang="lv">
+{% extends 'kopigs.html' %}
 
-<head>
-    <link rel="stylesheet" href="/static/css/SlimnīcasStyle.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=chrome">
-    <meta name="medicīna" content="medicīna">
-    <title>Slimnīcas</title>
-    <link rel="icon" href="/static/img/logo2.png">
-</head>
+{% block head %}
+<link rel="stylesheet" href="/static/css/Slimnīcassssss.css">
+<!-- {{ url_for('static', filename='css/Slimnīcas.css') }} -->
+{% endblock %}
 
-<body>
-    <div>
+{% block title %}
+Slimnīcas
+{% endblock %}
 
-        <img src="/static/img/logo.png" class="logo">
-
-        <div class="menu">
-            <a class="sakums" href="/">Sākums</a>
-            <a class="slimnicas" href="#">Slimnīca</a>
-            <a class="pacientiem" href="/pacientiem">Pacientiem</a>
-            <a class="Kontakti" href="/kontakti">Kontakti</a>
-        </div>
-
-        <div class="meklet">
-            <input type="text" class="meklēšanasAile" placeholder="Meklēt....">
-            <button type="submit" class="MeklešanasPoga"></button>
-        </div>
-    </div>
-    <div>
-        <button class="Ieiet">Ieiet</button>
-    </div>
-    </div>
-
-    <div id="logs">
-        <h2 class="virsraksts">Pievienot slimnīcu</h2>
-        <input placeholder="Slimnīcas nosaukums" type="text" id="SlimnicasNosaukums">
-        <input type="file" id="file" accept="image/png, image/jpeg">
-        <button id="poga">Pievienot slimnīcu</button>
-    </div>
+{% block body %}
+<form  id= 'logs' method="POST" enctype="multipart/form-data">
+    <h2 class="virsraksts">Pievienot slimnīcu</h2>
+    <input type="text" name="nosuakums" id='nosuakums'>
+    <input type="file" name="file" id="file" accept="image/png, image/jpeg">
+    <input type="submit" name="submit" value="Submit">
+  </form>
+ 
 
     <div class="slimnicasVirsraksts">
         <h1 class="sadarbojamies">Slimnīcas ar kurām mēs sadarbojamies.</h1>
     </div>
 
+    {% if slimnicas|length > 0 %}
     <div id="slimnicasPievienosana">
         <span id="pievienot2">
-
+            {% for el in slimnicas %}
+            <div class = 'pievienot2'>
+                <a href="/slimnicas/{{ el.id }}/edit" class = "edit"><img src="/static/img/edit.png" class = "edit" >
+                <a href="/slimnicas/{{ el.id }}/del"><img src="/static/img/close.png" class = "close" >
+                <a href="/slimnica/{{el.id}}"><img src='/static/uploads/ {{ el.bilde.filename }}' class= 'bilde' >
+                </a>
+            </a>
+        </a>
+                <h2 class='slimnicasvirsraksts'>{{ el.nosuakums }}</h2>
+            </div>
+            {% endfor %}
+        {% else %}
+        <h1 class="sadarbojamies">Vel nav pievienota neviena slimnīca!</h1>
+        {% endif %}
         </span>
         <img src="/static/img/+.png" alt="plus" id="plus">
     </div>
     <div class=fix></div>
 
-    <div class="apaksa">
-        <h3 class="nosaukums">Medicīnas centrs</h3>
-        <h3 class="talr">Talr. +371 26745334</h3>
-    </div>
+    {% endblock %}
 
-    <script src="/static/js/SlimnicasScript.js"></script>
-    <script src="/static/js/SlimnicasScript2.js"></script>
-
-</body>
-
-
-
-</html>
+    {% block js %}
+    <script src="{{url_for('static', filename='js/SlimnicasScriptt.js')}}"></script>
+    {% endblock %}
