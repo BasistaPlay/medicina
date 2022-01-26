@@ -1,0 +1,68 @@
+{% extends 'kopigs.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/Ārstu_edit.css') }}">
+<!-- {{ url_for('static', filename='css/Slimnīcas.css') }} -->
+{% endblock %}
+
+{% block title %}
+Rediģēt
+{% endblock %}
+
+{% block body %}
+<form  id= 'logs2' method="POST" enctype="multipart/form-data">
+    <h2 class="virsraksts">Pievienot Ārstu</h2>
+    <input type="text" name="Vards_uzvards" id='Vards_uzvards' value="{{ Ārsts.Vards_uzvards }}">
+    <input type="text" name="Profesija" id="Profesija" value="{{ Ārsts.Profesija }}">
+    Pirmdienas:
+      <input type="time" id="Pirmdienas" name='Pirmdienas' value="{{ Ārsts.pirmdiena_No }}" />
+      <a>-</a>
+      <input type="time" id="Pirmdienas2" name='Pirmdienas2'  value="{{ Ārsts.pirmdiena_Lidz }}"/>
+    </p>
+    <p>
+      otradienas:
+      <input type="time" id="otradienas" name="otradienas" value="{{ Ārsts.Otradiena_No }}" />
+      <a>-</a>
+      <input type="time" id="otradienas2" name="otradienas2" value="{{ Ārsts.Otradiena_Lidz }}" />
+    </p>
+    <p>
+      trešdienas:
+      <input type="time" id="tresdienas" name="tresdienas" value="{{ Ārsts.Trezdiena_No }}" />
+      <a>-</a>
+      <input type="time" id="tresdienas2" name="tresdienas2" value="{{ Ārsts.Trezdiena_Lidz }}" />
+    </p>
+    <p>
+      ceturdienas:
+      <input type="time" id="ceturdienas" name="ceturdienas" value="{{ Ārsts.Ceturdiena_NO }}" />
+      <a>-</a>
+      <input type="time" id="ceturdienas2" name="ceturdienas2" value="{{ Ārsts.Ceturdiena_Lidz }}" />
+    </p>
+    <p>
+      piekdienas:
+      <input type="time" id="piekdienas" name="piekdienas" value="{{ Ārsts.Piekdiena_No }}" />
+      <a>-</a>
+      <input type="time" id="piekdienas2" name="piekdienas2" value="{{ Ārsts.Piekdiena_Lidz }}" />
+    </p>
+    <p>
+      sestdienas:
+      <input type="time" id="sestdienas"name='sestdienas' value="{{ Ārsts.Sesdiena_No }}" />
+      <a>-</a>
+      <input type="time" id="sestdienas2" name="sestdienas2" value="{{ Ārsts.Sesdiena_Lidz }}" />
+    </p>
+     <p>
+      svētdienas:
+      <input type="time" id="svetdienas" name="svetdienas" value="{{ Ārsts.Svetdiena_No }}" />
+      <a>-</a>
+      <input type="time" id="svetdienas2" name="svetdienas2"  value="{{ Ārsts.Svetdiena_Lidz }}"/>
+    </p>
+    <input id='submit' type="submit" name="submit" value="Submit">
+  </form>
+ 
+
+    <div class="ārstu">
+        <h1 class="sadarbojamies">Rediģēt Ārsta informāciju!</h1>
+    </div>
+
+    {% endblock %}
+
+

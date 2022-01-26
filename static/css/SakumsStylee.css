@@ -1,0 +1,109 @@
+.jaunumi {
+  margin-top: 100px;
+  margin-left: 170px;
+  font-size: 28px;
+  border-color: rgb(0, 0, 0);
+  padding: 10px;
+}
+
+.jaunumuTabula {
+  height: auto;
+  width: 450px;
+  background-color: rgba(206, 205, 205, 0.719);
+  border-color: black;
+  border-radius: 15px;
+}
+
+.apaksa {
+  right: 5px;
+  border-style: solid;
+  margin-top: px;
+  margin-right: -5px;
+  height: 31px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  border-color: #b2dcd9;
+  background-color: #b2dcd9;
+}
+
+.nosaukums {
+  margin-top: 5px;
+  margin-left: 15px;
+}
+
+.talr {
+  margin-top: -38px;
+  margin-left: 89%;
+}
+
+.sakums {
+  background-color: #ddd;
+}
+
+.jaunumuapraksts {
+  padding: 10px;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.virsraksts {
+  text-align: center;
+  margin-top: -20px;
+}
+
+.dark .courses a {
+  color: #fff;
+}
+.bilde1 {
+  margin-left: 700px;
+  margin-top: -380px;
+  width: 100px;
+  position: absolute;
+  width: 300px;
+}
+.bilde2 {
+  margin-left: 1020px;
+  margin-top: -550px;
+  width: 100px;
+  position: absolute;
+  width: 300px;
+}
+
+.bilde3 {
+  margin-left: 1340px;
+  margin-top: -380px;
+  width: 100px;
+  position: absolute;
+  width: 300px;
+}
+
+.bilde1:hover {
+  border: 1px solid #fff;
+}
+.bilde2:hover {
+  border: 1px solid #fff;
+}
+.bilde3:hover {
+  border: 1px solid #fff;
+}
+
+.bilde_arsti {
+  width: 500px;
+  margin-left: 950px;
+  position: fixed;
+  bottom: 0;
+}
+.bilde_arsti2 {
+  width: 600px;
+  margin-left: 160px;
+  position: fixed;
+  bottom: 0;
+}
+
+.bilde_arsti3 {
+  position: fixed;
+  bottom: 0;
+  width: 300px;
+  margin-left: 1630px;
+}

@@ -1,0 +1,52 @@
+{% extends 'kopigs.html' %}
+
+{% block head %}
+<style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      background-color: rgb(53, 188, 241);
+    }
+    
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .close {
+  width: 25px;
+  margin-top:10px ;
+  margin-left: 20px;
+  display: table-column;
+}
+    </style>
+{% endblock %}
+
+{% block title %}
+Pieraksti
+{% endblock %}
+
+{% block body %}
+
+<h1 style="margin-left: 850px; margin-top: 100px;">Pieraksti:</h1>
+
+<table>
+    <tr>
+      <th>Vārds Uzvārds</th>
+      <th>Laiks</th>
+      <th>Vizītes Nr.</th>
+      <th>Noņemt</th>
+    </tr>
+
+    {% for y in pieraksts %}
+    <tr>
+        <td>{{ y.Pieraksts_Vards_Uzvards }}</td>
+        <td>{{ y.Vizītes_laiks }}</td>
+        <td>{{ y.Vizītes_Nr }}</td> 
+        <td> <a href="/Arstu/pieraksti/{{ y.id_pieraksts }}/del"><img src="/static/img/close.png" class = "close" ></td>
+    </tr>
+    {% endfor %}
+  </table>
+
+{% endblock %}

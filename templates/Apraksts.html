@@ -1,0 +1,48 @@
+{% extends 'kopigs.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/AprakstsStylee.css') }}">
+{% endblock %}
+
+{% block title %}
+Kontakti
+{% endblock %}
+
+{% block body %}
+<div class = 'apraksts'>
+         		<img src="/static/UploadsArsti/{{ Ārsts.Arsta_Bilde_nosaukums }}" class ='bildeee' alt="bilde" id="aprakstaBilde">
+                <h2 id="Vārdsuzvārds">{{ Ārsts.Vards_uzvards }}</h2>
+                <h3 id="ĀrstaProfesija">{{Ārsts.Profesija}}</h3>
+                <h2 id="DarbaLaiks">Darba Laiks</h2>
+            <a id="laiki">
+                <p>Pirmdiena: {{Ārsts.pirmdiena_No}} - {{ Ārsts.pirmdiena_Lidz }}</p>
+                <p>otradiena: {{ Ārsts.Otradiena_No }} - {{ Ārsts.Otradiena_Lidz }}</p>
+                <p>Trešdiena: {{ Ārsts.Trezdiena_No }} - {{ Ārsts.Trezdiena_Lidz }}</p>
+                <p>Ceturdiena: {{ Ārsts.Ceturdiena_NO }} - {{ Ārsts.Ceturdiena_Lidz }}</p>
+                <p>Piekdiena: {{ Ārsts.Piekdiena_No }} - {{ Ārsts.Piekdiena_Lidz }}</p>
+                <p>Sesdiena: {{ Ārsts.Sesdiena_No }} - {{ Ārsts.Svetdiena_Lidz }}</p>
+                <p>Svētdiena: {{ Ārsts.Svetdiena_No }} - {{ Ārsts.Svetdiena_Lidz }}</p>
+            </a>
+            <input type="button" class="Pierakstīties" id="Pierakstīties" value="Pierakstīties" onclick="myFunction()"/>
+            {% if current_user.is_authenticated %}
+            <a href="/Arstu/pieraksti/{{ Ārsts.id_arsts }}"><input type="button" class="Pierakstīties" id="Pieraksti" value="Pieraksti" /></a>
+            {% endif %}
+            <a href="/slimnica/{{ Ārsts.id_slimnica }}"><img src="/static/img/close.png" class = "close2"></a>
+         </div>
+
+         <form  method="POST" class="pierakstities" id='pierakstities2' style="display:none;" >
+            <h1 class="pierkstvirsraksts">Pierakstīties</h1>
+            <h2 id="pvards">{{ Ārsts.Vards_uzvards }}</h2>
+            <h2 id="pprofesija">{{Ārsts.Profesija}}</h2>
+         
+            <input placeholder="Vārds Uzvārds" type="text" id="pacientavards" name="pacientavards" >
+            <input type="datetime-local" id="meeting-time" name="meeting-time" name="meeting-time">
+            <div>
+               <a href="/Ārstu/pieraksts/{{ Ārsts.id_arsts }}"> <input type="submit" name="submit" value="Pierakstīties" id="poga2"></a>
+            </div>
+            </form>
+{% endblock %}
+
+    {% block js %}
+    <script src="{{url_for('static', filename='js/Apraksts.js')}}"></script>
+    {% endblock %}

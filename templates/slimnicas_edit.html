@@ -1,0 +1,26 @@
+{% extends 'kopigs.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/slimnicas_edit.css') }}">
+<!-- {{ url_for('static', filename='css/Slimnīcas.css') }} -->
+{% endblock %}
+
+{% block title %}
+Rediģēt
+{% endblock %}
+
+{% block body %}
+<form  id= 'logss' method="POST">
+    <h2 class="virsraksts">Rediģēt slimnīcu</h2>
+    <input type="text" name="nosuakums" id='nosuakums' value="{{slimnica.nosuakums}}">
+    <input type="submit" name="submit" value="update">
+</form>
+ 
+
+    <div class="slimnicasVirsraksts">
+        <h1 class="sadarbojamies">Rediģēt slimnīcas nosaukumu</h1>
+    </div>
+
+    {% endblock %}
+
+

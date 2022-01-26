@@ -1,0 +1,141 @@
+.slimnicas {
+  background-color: #ddd;
+}
+
+#logs2 {
+  display: none;
+  position: absolute;
+  top: 56.2%;
+  left: 50%;
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(132, 45, 253, 1) 100%
+  );
+  width: 380px;
+  margin: -320px 0 0 -300px;
+  padding: 45px;
+  box-shadow: 0 0 3px rgb(255, 0, 0);
+  margin-bottom: 15px;
+}
+
+.virsraksts {
+  margin-top: -35px;
+  margin-left: 100px;
+}
+
+#ArstaBilde {
+  margin-top: 100px;
+}
+#poga {
+  margin-left: 100px;
+  margin-top: 50px;
+}
+
+#Vards_uzvards {
+  width: 290px;
+  text-align: center;
+  margin-left: 35px;
+}
+
+#Profesija {
+  width: 290px;
+  margin-top: 5px;
+  text-align: center;
+  margin-left: 35px;
+}
+
+p {
+  margin-bottom: -10px;
+}
+
+#Pirmdienas {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+#otradienas {
+  margin-left: 26px;
+}
+#tresdienas {
+  margin-left: 28px;
+}
+#ceturdienas {
+  margin-left: 19px;
+}
+#piekdienas {
+  margin-left: 23px;
+}
+#sestdienas {
+  margin-left: 26px;
+}
+#svetdienas {
+  margin-left: 23px;
+}
+
+.DarbaLaiks {
+  margin-top: 15px;
+  margin-left: 130px;
+}
+#plus {
+  display: inline-flex;
+  flex-direction: column;
+  width: 90px;
+  margin-left: 100px;
+  margin-top: 200px;
+  cursor: pointer;
+  position: fixed;
+}
+
+.ArstaBilde {
+  width: 210px;
+  height: 280px;
+}
+
+.pievienotArstu {
+  display: inline-flex;
+  flex-direction: column;
+  width: 210px;
+  height: auto;
+  cursor: pointer;
+  padding: 40px;
+  margin: 22px;
+  margin-top: 300px;
+}
+
+.vards {
+  text-align: center;
+  margin-top: -1px;
+}
+
+.Profesija {
+  text-align: center;
+  margin-top: -20px;
+}
+.close {
+  width: 30px;
+  margin-top: -240px;
+  margin-bottom: -35px;
+  position: relative;
+  margin-left: 180px;
+}
+
+.fix {
+  height: 100px;
+}
+
+.edit {
+  width: 30px;
+  margin-top: -250px;
+  margin-bottom: -28px;
+  margin-left: 1px;
+  position: relative;
+}
+
+#submit {
+  margin-top: 30px;
+}
+
+#file2 {
+  margin-top: 30px;
+}

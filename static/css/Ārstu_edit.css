@@ -1,0 +1,93 @@
+#logs2 {
+  display: block;
+  position: absolute;
+  top: 56.2%;
+  left: 50%;
+  background: rgb(108 102 187 / 65%);
+  width: 380px;
+  padding: 45px;
+  box-shadow: 0 0 3px rgb(255, 0, 0);
+  margin-top: -250px;
+  margin-left: -270px;
+}
+
+.virsraksts {
+  margin-top: -35px;
+  margin-left: 100px;
+}
+
+#poga {
+  margin-left: 100px;
+  margin-top: 50px;
+}
+
+#arstavards {
+  width: 290px;
+  text-align: center;
+  margin-left: 35px;
+}
+
+#arstaprofesija {
+  width: 290px;
+  margin-top: 5px;
+  text-align: center;
+  margin-left: 35px;
+}
+
+p {
+  margin-bottom: -10px;
+}
+
+#Pirmdienas {
+  margin-left: 20px;
+}
+#otradienas {
+  margin-left: 26px;
+}
+#tresdienas {
+  margin-left: 28px;
+}
+#ceturdienas {
+  margin-left: 19px;
+}
+#piekdienas {
+  margin-left: 23px;
+}
+#sestdienas {
+  margin-left: 26px;
+}
+#svetdienas {
+  margin-left: 23px;
+}
+
+.pievienot {
+  display: inline-flex;
+  flex-direction: column;
+  width: 300px;
+  height: auto;
+  cursor: pointer;
+  padding: 28px;
+  margin-top: 100px;
+  margin: 10px;
+}
+
+#submit {
+  margin-top: 30px;
+}
+
+#Vards_uzvards {
+  width: 300px;
+  margin-left: 35px;
+  margin-bottom: 15px;
+}
+
+#Profesija {
+  width: 300px;
+  margin-left: 35px;
+  margin-bottom: 15px;
+}
+
+.sadarbojamies {
+  margin-left: 720px;
+  margin-top: 100px;
+}

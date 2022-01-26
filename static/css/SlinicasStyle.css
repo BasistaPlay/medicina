@@ -1,0 +1,99 @@
+.sadarbojamies {
+  margin-top: 50px;
+  text-align: center;
+  margin-left: 650px;
+  display: flex;
+}
+
+.slimnicas {
+  background-color: #ddd;
+}
+
+.pievienot2 {
+  display: inline-flex;
+  flex-direction: column;
+  width: 350px;
+  height: auto;
+  padding: 0px;
+  margin: 12px;
+  padding-top: 65px;
+  position: relative;
+  margin-top: -60px;
+}
+
+.slimnicasvirsraksts {
+  width: 300px;
+  margin-top: -2px;
+  text-align: center;
+}
+.bilde {
+  width: 300px;
+  height: 200px;
+}
+
+#plus {
+  display: inline-flex;
+  flex-direction: column;
+  width: 90px;
+  margin: 0;
+  margin-left: 120px;
+  margin-top: 80px;
+  cursor: pointer;
+  position: absolute;
+}
+
+#logs {
+  display: none;
+  position: absolute;
+  top: 56.2%;
+  left: 50%;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(101, 101, 185, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  width: 250px;
+  height: 90px;
+  margin: -320px 0 0 -220px;
+  padding: 45px;
+  box-shadow: 0 0 3px rgb(218, 0, 0);
+  margin-top: -200px;
+}
+
+.virsraksts {
+  margin-top: -35px;
+  margin-left: 25px;
+}
+#nosuakums {
+  width: 240px;
+  text-align: center;
+}
+#file {
+  margin-top: 10px;
+}
+
+#Submit {
+  margin-left: 90px;
+  margin-top: 20px;
+}
+
+.close {
+  width: 30px;
+  margin-top: -250px;
+  margin-bottom: -35px;
+  margin-left: 270px;
+  position: relative;
+}
+.fix {
+  height: 80px;
+}
+
+.edit {
+  width: 30px;
+  margin-top: -250px;
+  margin-bottom: -28px;
+  margin-left: 1px;
+  position: relative;
+}

@@ -1,0 +1,143 @@
+.apraksts {
+  background-color: rgb(5, 122, 255);
+  box-shadow: 0 0 3px rgb(255, 0, 0);
+  width: 800px;
+  height: 400px;
+  margin-top: 200px;
+  margin-left: 520px;
+  position: fixed;
+  border-radius: 10px;
+  position: fixed;
+}
+#aprakstaBilde {
+  width: 210px;
+  height: 280px;
+  margin-left: 20px;
+  margin-top: 15px;
+  border-radius: 10px;
+  position: absolute;
+  display: flex;
+  position: fixed;
+}
+#Vārdsuzvārds {
+  margin-left: 270px;
+  margin-top: 50px;
+  position: fixed;
+}
+
+#ĀrstaProfesija {
+  margin-left: 272px;
+  margin-top: 75px;
+  position: fixed;
+}
+#DarbaLaiks {
+  margin-top: 40px;
+  margin-left: 560px;
+  width: 1000px;
+  position: fixed;
+  color: rgb(255, 255, 255);
+}
+
+#laiki {
+  text-align: center;
+  position: absolute;
+  margin-left: 500px;
+  margin-top: 75px;
+  font-size: 18px;
+  width: 250px;
+  height: 300px;
+  border-radius: 10px;
+  position: fixed;
+  background-color: rgb(188, 243, 209);
+}
+.Pierakstīties {
+  margin-left: 270px;
+  margin-top: 150px;
+  border-radius: 5px;
+  width: 130px;
+  height: 30px;
+  background-color: red;
+  color: rgb(255, 255, 255);
+  font-family: cursive;
+  font-size: 16px;
+  cursor: pointer;
+  position: fixed;
+}
+.close2 {
+  width: 30px;
+  margin-top: 5px;
+  margin-left: 765px;
+  display: flex;
+  cursor: pointer;
+  position: fixed;
+}
+
+input[type="checkbox"] {
+  margin-left: 40px;
+}
+
+.nestrada {
+  display: block;
+  margin-left: 325px;
+}
+
+.border {
+  background-color: #ddd;
+}
+
+.pierakstities {
+  margin-left: 650px;
+  margin-top: 250px;
+  border-radius: 5px;
+  width: 550px;
+  height: 300px;
+  background-color: rgb(129 194 160 / 93%);
+  color: rgb(255, 255, 255);
+  font-family: cursive;
+  font-size: 16px;
+  position: fixed;
+}
+.pierkstvirsraksts {
+  margin-top: 0px;
+  margin-left: 170px;
+}
+#pvards {
+  margin-left: 190px;
+  margin-top: -20px;
+}
+#pprofesija {
+  margin-left: 210px;
+  margin-top: -20px;
+}
+#pacientavards {
+  width: 340px;
+  margin-left: 100px;
+}
+#pacientavards {
+  width: 340px;
+  margin-left: 100px;
+}
+#meeting-time {
+  width: 342px;
+  margin-left: 100px;
+  margin-top: 10px;
+}
+
+#poga2 {
+  margin-left: 230px;
+  margin-top: 10px;
+}
+
+#Pieraksti {
+  margin-left: 60px;
+  margin-top: 320px;
+  border-radius: 5px;
+  width: 130px;
+  height: 30px;
+  background-color: #ff6f00;
+  color: rgb(255, 255, 255);
+  font-family: cursive;
+  font-size: 16px;
+  cursor: pointer;
+  position: fixed;
+}

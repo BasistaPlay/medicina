@@ -1,0 +1,52 @@
+{% extends 'kopigs.html' %}
+
+{% block head %}
+<!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/slimnicas_edit.css') }}"> -->
+<style>
+    table, th, td {
+      border:1px solid black;
+      border-collapse: collapse;
+      margin-top: 100px;
+      margin-left: 700px;
+      width: 600px;
+      height: 30px;
+      background-color: rgba(224, 80, 80, 0.253);
+    }
+      .virsraksts{
+        margin-top: 100px;
+        margin-left: 800px;
+      }
+    
+</style>
+{% endblock %}
+
+{% block title %}
+Pieraksts
+{% endblock %}
+
+{% block body %}
+
+<table>
+    <h1 class="virsraksts">Pierakstīšanas informācija</h1>
+    <tr>
+      <th>{{ pieraksts.Pieraksts_Vards_Uzvards }}</th>
+      <th>Vizītes Nr.{{ pieraksts.Vizītes_Nr }}</th>
+    </tr>
+    <tr>
+      <th>Slimnīca</th>
+      <th>{{ slimnica.nosuakums }}</th>
+    </tr>
+    <tr>
+        <th>Vizītes laiks</th>
+        <th>{{ pieraksts.Vizītes_laiks }}</th>
+    </tr>
+    <tr>
+        <th>Ārsts</th>
+        <th>{{ Ārsti.Vards_uzvards }}</th>
+    </tr>
+    <tr>
+        <th>Darba joma</th>
+        <th>{{ Ārsti.Profesija }}</th>
+    </tr>
+  </table>
+{% endblock %}

@@ -1,8 +1,7 @@
 {% extends 'kopigs.html' %}
 
 {% block head %}
-<link rel="stylesheet" href="/static/css/Slimnīcassssss.css">
-<!-- {{ url_for('static', filename='css/Slimnīcas.css') }} -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/SlinicasStyle.css') }}">
 {% endblock %}
 
 {% block title %}
@@ -10,26 +9,20 @@ Slimnīcas
 {% endblock %}
 
 {% block body %}
-<form  id= 'logs' method="POST" enctype="multipart/form-data">
-    <h2 class="virsraksts">Pievienot slimnīcu</h2>
-    <input type="text" name="nosuakums" id='nosuakums'>
-    <input type="file" name="file" id="file" accept="image/png, image/jpeg">
-    <input type="submit" name="submit" value="Submit">
-  </form>
- 
-
     <div class="slimnicasVirsraksts">
         <h1 class="sadarbojamies">Slimnīcas ar kurām mēs sadarbojamies.</h1>
     </div>
 
     {% if slimnicas|length > 0 %}
-    <div id="slimnicasPievienosana">
-        <span id="pievienot2">
+
+
             {% for el in slimnicas %}
             <div class = 'pievienot2'>
+                {% if current_user.is_authenticated %}
                 <a href="/slimnicas/{{ el.id }}/edit" class = "edit"><img src="/static/img/edit.png" class = "edit" >
                 <a href="/slimnicas/{{ el.id }}/del"><img src="/static/img/close.png" class = "close" >
-                <a href="/slimnica/{{el.id}}"><img src='/static/uploads/ {{ el.bilde.filename }}' class= 'bilde' >
+                {% endif %}
+                <a href="/slimnica/{{el.id}}"><img src='static/UploadsSlimnicas/{{ el.name }}' class= 'bilde' >
                 </a>
             </a>
         </a>
@@ -39,13 +32,22 @@ Slimnīcas
         {% else %}
         <h1 class="sadarbojamies">Vel nav pievienota neviena slimnīca!</h1>
         {% endif %}
+
         </span>
-        <img src="/static/img/+.png" alt="plus" id="plus">
+        {% if current_user.is_authenticated %}
+        <a><img src="/static/img/+.png" alt="plus" id="plus"></a>
+        {% endif %}
     </div>
     <div class=fix></div>
+    <form  id= 'logs' method="POST" enctype="multipart/form-data">
+        <h2 class="virsraksts">Pievienot slimnīcu</h2>
+        <input type="text" name="nosuakums" id='nosuakums' placeholder="Slimnīcas nosaukums">
+        <input type="file" name="file" id="file" accept="image/png, image/jpeg">
+        <input type="submit" name="submit" value="Submit" id="Submit" >
+      </form>
 
     {% endblock %}
 
     {% block js %}
-    <script src="{{url_for('static', filename='js/SlimnicasScriptt.js')}}"></script>
+    <script src="{{url_for('static', filename='js/Slimnicas.js')}}"></script>
     {% endblock %}

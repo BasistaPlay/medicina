@@ -1,7 +1,7 @@
 {% extends 'kopigs.html' %}
 
 {% block head %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/ĀrstiStyle.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/ĀrstuSarakstsStyle.css') }}">
 {% endblock %}
 
 {% block title %}
@@ -9,78 +9,82 @@
 {% endblock %}
 
 {% block body %}
-    <div id="logs2">
 
+      {% for x in Ārsti %}
+        <div class='pievienotArstu'>
+          {% if current_user.is_authenticated %}
+          <a href="/Ārstu/{{ x.id_arsts }}/edit" class = "edit"><img src="/static/img/edit.png" class = "edit" ></a>
+          <a href="/Ārstu/{{ x.id_arsts }}/del"><img src="/static/img/close.png" class = "close" ></a>
+          {% endif %}
+          <a href="/Ārstu/{{ x.id_arsts }}/apraksts"><img src='/static/UploadsArsti/{{ x.Arsta_Bilde_nosaukums }}' class= 'ArstaBilde' ></a>
+         	<h2 class='vards'>{{ x.Vards_uzvards }}</h2>
+          <h3 class='Profesija'>{{ x.Profesija }}</h3>
+        </div>
+        {% endfor %}
+
+      {% if current_user.is_authenticated %}
+      <img src="/static/img/+.png" alt="plus" id="plus" />
+      {% endif %}
+    </div>
+    <div id="Apraksts"></div>
+    <div class="fix"></div>
+
+    <div id="PieteiktiesPieArsta" class="PieteiktiesPieArsta"></div>
+
+    <form  id= 'logs2' method="POST" enctype="multipart/form-data">
       <h2 class="virsraksts">Pievienot Ārstu</h2>
-      <input placeholder="Arsta vārds un uzvārds" type="text" id="arstavards" />
-      <input placeholder="Kas pa ārstu" type="text" id="arstaprofesija" />
-      <h2 class="DarbaLaiks">Darba laiks:</h2>
-      <h3 class="nestrada">Nestrādā</h3>
-      <p>
-        Pirmdienas:
-        <input type="time" id="Pirmdienas" />
+      <input type="text" name="Vards_uzvards" id='Vards_uzvards' placeholder="Ārsta Vārds Uzvārds">
+      <input type="text" name="Profesija" id="Profesija" placeholder="Profesija">
+      Pirmdienas:
+        <input type="time" id="Pirmdienas" name='Pirmdienas' />
         <a>-</a>
-        <input type="time" id="Pirmdienas2" />
-        <input type="checkbox" id="Nestrada1" name="nestrāda" Uncheck />
+        <input type="time" id="Pirmdienas2" name='Pirmdienas2' />
       </p>
       <p>
         otradienas:
         <input type="time" id="otradienas" name="otradienas" />
         <a>-</a>
         <input type="time" id="otradienas2" name="otradienas2" />
-        <input type="checkbox" id="Nestrada2" name="nestrāda" />
       </p>
       <p>
         trešdienas:
         <input type="time" id="tresdienas" name="tresdienas" />
         <a>-</a>
-        <input type="time" id="tresdienas2" name="tresdienas" />
-        <input type="checkbox" id="Nestrada3" name="nestrāda" />
+        <input type="time" id="tresdienas2" name="tresdienas2" />
       </p>
       <p>
         ceturdienas:
         <input type="time" id="ceturdienas" name="ceturdienas" />
         <a>-</a>
         <input type="time" id="ceturdienas2" name="ceturdienas2" />
-        <input type="checkbox" id="Nestrada4" name="nestrāda" />
       </p>
       <p>
         piekdienas:
         <input type="time" id="piekdienas" name="piekdienas" />
         <a>-</a>
         <input type="time" id="piekdienas2" name="piekdienas2" />
-        <input type="checkbox" id="Nestrada5" name="nestrāda" />
       </p>
       <p>
         sestdienas:
-        <input type="time" id="sestdienas" />
+        <input type="time" id="sestdienas"name='sestdienas' />
         <a>-</a>
         <input type="time" id="sestdienas2" name="sestdienas2" />
-        <input type="checkbox" id="Nestrada6" name="nestrāda" />
       </p>
-      <p>
+       <p>
         svētdienas:
-        <input type="time" id="svētdienas" name="svētdienas" />
+        <input type="time" id="svetdienas" name="svetdienas" />
         <a>-</a>
-        <input type="time" id="svētdienas2" name="svētdienas2" />
-        <input type="checkbox" id="Nestrada7" name="nestrāda" />
+        <input type="time" id="svetdienas2" name="svetdienas2" />
       </p>
-      <input type="file" id="ArstaBilde" accept="image/png, image/jpeg" />
-      <button id="poga">Pievienot ārstu</button>
-    </div>
-    <div id="ArstuPievienosana">
-      <span id="pievienotArstu"> </span>
-      <img src="/static/img/+.png" alt="plus" id="plus" />
-    </div>
-    <div id="Apraksts"></div>
-    <div class="fix"></div>
-
-    <div id="PieteiktiesPieArsta" class="PieteiktiesPieArsta"></div>
+      <input type="file" name="file2" id="file2" accept="image/png, image/jpeg">
+      <input type="submit" name="submit" value="Submit" id="submit">
+    </form>
+    
     {% endblock %}
 
     {% block js %}
-    <script src="{{url_for('static', filename='js/ArstiScript.js')}}"></script>
-    <script src="{{url_for('static', filename='js/ArstiScript2.js')}}"></script>
+    <script src="{{url_for('static', filename='js/Arstii.js')}}"></script>
+    <script src="{{url_for('static', filename='js/Arsti2.js')}}"></script>
     {% endblock %}
 
 

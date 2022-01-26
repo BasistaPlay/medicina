@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="lv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=chrome" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/kopigs.css') }}">
+    <link rel="stylesheet" href="/static/css/Slimnīcas.css">
+    {% block head %}{% endblock %}
+    <meta name="medicīna" content="medicīna" />
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="icon" href="/static/img/logo2.png" />
+  </head>
+
+  <body>
+    <div>
+      <img src="/static/img/logo.png" class="logo" />
+
+      <div class="menu">
+        <a class="sakums" href="/sakums">Sākums</a>
+        <a class="slimnicas" href="/slimnicas">Slimnīca</a>
+        <a class="pacientiem" href="/pacientiem">Pacientiem</a>
+      </div>
+
+      <div class="meklet">
+        <input type="text" class="meklēšanasAile" placeholder="Meklēt...." />
+        <button type="submit" class="MeklešanasPoga"></button>
+      </div>
+      <div>
+        {% if current_user.is_authenticated %}
+        <a href="/logout"><button class="Ieiet" >izlogoties</button></a>
+        {%else%}
+        <a href="/pieslegties"><button class="Ieiet" >Ieiet</button></a>
+        {% endif %}
+        <!-- <a href="/pieslegties"><button class="Ieiet" >Ieiet</button></a> -->
+      </div>
+    </div>
+    
+    
+    {% block body %}{% endblock %}
+
+    <div class="apaksa">
+      <h3 class="nosaukums">Medicīnas centrs</h3>
+      <h3 class="talr">Talr. +371 26745334</h3>
+    </div>
+    {% block js %}{% endblock %}
+
+
+  </body>
+</html>
