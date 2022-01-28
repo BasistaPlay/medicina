@@ -16,9 +16,15 @@
           <a href="/Ārstu/{{ x.id_arsts }}/edit" class = "edit"><img src="/static/img/edit.png" class = "edit" ></a>
           <a href="/Ārstu/{{ x.id_arsts }}/del"><img src="/static/img/close.png" class = "close" ></a>
           {% endif %}
+          {% if current_user.is_authenticated %}
           <a href="/Ārstu/{{ x.id_arsts }}/apraksts"><img src='/static/UploadsArsti/{{ x.Arsta_Bilde_nosaukums }}' class= 'ArstaBilde' ></a>
          	<h2 class='vards'>{{ x.Vards_uzvards }}</h2>
           <h3 class='Profesija'>{{ x.Profesija }}</h3>
+          {% else %}
+          <a href="/Ārstu/{{ x.id_arsts }}/apraksts"><img src='/static/UploadsArsti/{{ x.Arsta_Bilde_nosaukums }}' class= 'ArstaBilde1' ></a>
+          <h2 class='vards'>{{ x.Vards_uzvards }}</h2>
+         <h3 class='Profesija'>{{ x.Profesija }}</h3>
+         {% endif %}
         </div>
         {% endfor %}
 

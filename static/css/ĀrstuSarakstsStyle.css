@@ -91,6 +91,11 @@ p {
   width: 210px;
   height: 280px;
 }
+.ArstaBilde1 {
+  width: 210px;
+  height: 280px;
+  margin-top: -230px;
+}
 
 .pievienotArstu {
   display: inline-flex;
