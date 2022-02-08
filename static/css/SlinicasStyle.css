@@ -5,10 +5,6 @@
   display: flex;
 }
 
-.slimnicas {
-  background-color: #ddd;
-}
-
 .pievienot2 {
   display: inline-flex;
   flex-direction: column;
@@ -96,4 +92,9 @@
   margin-bottom: -28px;
   margin-left: 1px;
   position: relative;
+}
+
+.menu-4 li:hover a,
+.menu-4 .current2 a {
+  transform: translateY(100%);
 }

@@ -1,5 +1,11 @@
 body {
-  background-color: #75abfb;
+  background: rgb(14, 220, 240);
+  background: linear-gradient(
+    90deg,
+    rgba(14, 220, 240, 1) 0%,
+    rgba(1, 52, 215, 0.6839110644257703) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
 }
 
 .logo {
@@ -8,101 +14,6 @@ body {
   margin-left: 50px;
 }
 
-.menu {
-  display: block;
-  background: rgb(10, 218, 44);
-  background: linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 0, 0, 1) 100%
-  );
-  overflow: hidden;
-  width: 538px;
-  height: 44px;
-  position: absolute;
-  margin-left: 430px;
-  margin-top: -140px;
-}
-
-.menu a {
-  float: left;
-  color: #000000;
-  text-align: center;
-  padding: 12px 50px;
-  text-decoration: none;
-  font-size: 18px;
-  font-family: Andale Mono, monospace;
-}
-
-.menu a:hover {
-  background: rgb(255, 255, 255);
-  background: linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(97, 243, 255, 1) 92%,
-    rgba(0, 236, 255, 1) 100%
-  );
-  color: black;
-}
-
-.meklet {
-  margin-left: 1100px;
-  margin-top: -128px;
-}
-
-.meklēšanasAile {
-  width: 350px;
-  height: 23px;
-}
-
-.MeklešanasPoga {
-  width: 15px;
-  height: 15px;
-}
-
-.Ieiet {
-  display: block;
-  appearance: button;
-  backface-visibility: hidden;
-  background-color: #405cf5;
-  border-radius: 6px;
-  border-width: 0;
-  box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
-    rgba(50, 50, 93, 0.1) 0 2px 5px 0, rgba(0, 0, 0, 0.07) 0 1px 1px 0;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
-    Ubuntu, sans-serif;
-  font-size: 100%;
-  height: 44px;
-  line-height: 1.15;
-  margin: 12px 0 0;
-  outline: none;
-  overflow: hidden;
-  padding: 0 25px;
-  position: relative;
-  text-align: center;
-  text-transform: none;
-  transform: translateZ(0);
-  transition: all 0.2s, box-shadow 0.08s ease-in;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  width: auto;
-  margin-left: 1700px;
-  margin-top: -35px;
-}
-
-.Ieiet:disabled {
-  cursor: default;
-}
-
-.Ieiet:focus {
-  box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
-    rgba(50, 50, 93, 0.2) 0 6px 15px 0, rgba(0, 0, 0, 0.1) 0 2px 2px 0,
-    rgba(50, 151, 211, 0.3) 0 0 0 4px;
-}
 
 .apaksa {
   right: 5px;
@@ -126,3 +37,94 @@ body {
   margin-top: -38px;
   margin-left: 89%;
 }
+
+.menu {
+  background-color: white;
+  height: 200px;
+  margin-top: -250px;
+  margin-left: -20px;
+  margin-right: -8px;
+}
+.menu-4 {
+  margin-top: -20px;
+  margin-left: -800px;
+  margin-bottom: -90px;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.menu-4 * {
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.menu-4 li {
+  display: inline-block;
+  list-style: outside none none;
+  margin: 0 1.5em;
+  overflow: hidden;
+}
+.menu-4 a {
+  padding: 0.3em 0;
+  color: #212121;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 1px;
+  margin: 0;
+  text-decoration: none;
+}
+.menu-4 a:before,
+.menu-4 a:after {
+  position: absolute;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.menu-4 a:before {
+  bottom: 100%;
+  display: block;
+  height: 3px;
+  width: 100%;
+  content: "";
+  background-color: #fa0808;
+}
+.menu-4 a:after {
+  padding: 0.3em 0;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  content: attr(data-hover);
+  color: #212121;
+  white-space: nowrap;
+}
+
+#buttons {
+  margin-left: 1600px;
+  text-align: center;
+}
+
+.btn {
+  border-radius: 5px;
+  padding: 8px 25px;
+  font-size: 22px;
+  text-decoration: none;
+  margin: 20px;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+}
+
+.btn:active {
+  transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+  box-shadow: 0px 1px 0px 0px;
+}
+
+.blue {
+  background-color: #55acee;
+  box-shadow: 0px 5px 0px 0px #3c93d5;
+}
+#poga {
+  margin-bottom: 80px;
+}
+

@@ -24,8 +24,6 @@
   margin-top: -280px;
 }
 
-.info {
-}
 .virsraksts2 {
   margin: 10px;
   padding: 15px;
@@ -55,8 +53,7 @@
 }
 
 .informācija {
-  border: #ffffff;
-  background-color: #ffffff;
+  background: rgb(255, 255, 255);
   margin-top: 170px;
   margin-left: -30px;
   width: 1300px;
@@ -69,4 +66,9 @@
   width: 300px;
   margin-top: -289px;
   margin-left: 900px;
+}
+
+.menu-4 li:hover a,
+.menu-4 .current3 a {
+  transform: translateY(100%);
 }

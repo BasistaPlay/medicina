@@ -8,33 +8,31 @@
     {% block head %}{% endblock %}
     <meta name="medicīna" content="medicīna" />
     <title>{% block title %}{% endblock %}</title>
-    <link rel="icon" href="/static/img/logo2.png" />
+    <link rel="icon" href="/static/img/logo.png" />
   </head>
 
   <body>
     <div>
-      <img src="/static/img/logo.png" class="logo" />
+       <img src="/static/img/logo1.png" class="logo" /> 
 
-      <div class="menu">
-        <a class="sakums" href="/sakums">Sākums</a>
-        <a class="slimnicas" href="/slimnicas">Slimnīca</a>
-        <a class="pacientiem" href="/pacientiem">Pacientiem</a>
-      </div>
 
-      <div class="meklet">
-        <input type="text" class="meklēšanasAile" placeholder="Meklēt...." />
-        <button type="submit" class="MeklešanasPoga"></button>
-      </div>
-      <div>
-        {% if current_user.is_authenticated %}
-        <a href="/logout"><button class="Ieiet" >izlogoties</button></a>
-        {%else%}
-        <a href="/pieslegties"><button class="Ieiet" >Ieiet</button></a>
-        {% endif %}
-        <!-- <a href="/pieslegties"><button class="Ieiet" >Ieiet</button></a> -->
-      </div>
-    </div>
-    
+  <div class="style-4">
+    <ul class="menu-4">
+    <li class="current1"><a data-hover="sākums"  href="/sakums">Sākums</a></li>
+    <li class="current2"><a data-hover="slimnīcas" href="/slimnicas">Slimnīca</a></li>
+    <li class="current3"><a data-hover="pacientiem"  href="/pacientiem">Pacientiem</a></li>
+
+</div>
+
+<div id="buttons">
+  {% if current_user.is_authenticated %}
+  <a href="/logout" class="btn blue" id="poga">izlogoties</a>
+  {%else%}
+  <a href="/pieslegties" class="btn blue" id="poga">Ieiet</a>
+  {% endif %}
+</div>
+
+<div class="menu">  </div>
     
     {% block body %}{% endblock %}
 

@@ -8,7 +8,7 @@
   margin-left: 800px;
 }
 
-/* Reset top and bottom margins from certain elements */
+
 .login-header,
 .login p {
   margin-top: 0;
@@ -69,7 +69,11 @@
   background: #17c;
 }
 
-
 .login input[type="submit"]:focus {
   border-color: #05a;
+}
+
+.menu-4 li:hover a,
+.menu-4 .current a {
+  transform: translateY(100%);
 }
