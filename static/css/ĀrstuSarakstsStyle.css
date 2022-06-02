@@ -1,3 +1,7 @@
+#buttons {
+  margin-left: 1500px;
+}
+
 .slimnicas {
   background-color: #ddd;
 }
@@ -82,9 +86,9 @@ p {
   flex-direction: column;
   width: 90px;
   margin-left: 100px;
-  margin-top: 200px;
+  margin-top: 250px;
   cursor: pointer;
-  position: fixed;
+  position: absolute;
 }
 
 .ArstaBilde {
@@ -105,7 +109,7 @@ p {
   cursor: pointer;
   padding: 40px;
   margin: 22px;
-  margin-top: 300px;
+  margin-top: 350px;
 }
 
 .vards {
@@ -146,5 +150,15 @@ p {
 }
 
 #buttons {
+  margin-top: -120px;
+}
+
+.menu-4 li:hover a,
+.menu-4 .current2 a {
+  transform: translateY(100%);
+}
+
+#buttons {
+  margin-left: 1400px;
   margin-top: -120px;
 }

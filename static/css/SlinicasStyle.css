@@ -1,5 +1,9 @@
+.menu{
+  margin-top: -190px;
+}
+
 .sadarbojamies {
-  margin-top: 50px;
+  margin-top: 150px;
   text-align: center;
   margin-left: 650px;
   display: flex;
@@ -12,8 +16,8 @@
   height: auto;
   padding: 0px;
   margin: 12px;
-  padding-top: 65px;
-  position: relative;
+  padding-top: 120px;
+  position: relative, fixed;
   margin-top: -60px;
 }
 

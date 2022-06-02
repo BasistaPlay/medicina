@@ -12,28 +12,29 @@
   </head>
 
   <body>
+
+  <div class="menu">
     <div>
-       <img src="/static/img/logo1.png" class="logo" /> 
+      <img src="/static/img/logo1.png" class="logo" /> 
+      <div class="style-4">
+        <ul class="menu-4">
+        <li class="current1"><a data-hover="sākums"  href="/sakums">Sākums</a></li>
+        <li class="current2"><a data-hover="slimnīcas" href="/slimnicas">Slimnīca</a></li>
+        <li class="current3"><a data-hover="pacientiem"  href="/pacientiem">Pacientiem</a></li>
+      </div>
+    </div>
 
-
-  <div class="style-4">
-    <ul class="menu-4">
-    <li class="current1"><a data-hover="sākums"  href="/sakums">Sākums</a></li>
-    <li class="current2"><a data-hover="slimnīcas" href="/slimnicas">Slimnīca</a></li>
-    <li class="current3"><a data-hover="pacientiem"  href="/pacientiem">Pacientiem</a></li>
-
-</div>
-
-<div id="buttons">
-  {% if current_user.is_authenticated %}
-  <a href="/logout" class="btn blue" id="poga">izlogoties</a>
-  {%else%}
-  <a href="/pieslegties" class="btn blue" id="poga">Ieiet</a>
-  {% endif %}
-</div>
-
-<div class="menu">  </div>
+    <div id="buttons">
+      {% if current_user.is_authenticated %}
+      <a href="/logout" class="btn blue" id="poga">izlogoties</a>
+      {%else%}
+      <a href="/pieslegties" class="btn blue" id="poga">Ieiet</a>
+      {% endif %}
+    </div>
     
+  </div>
+
+
     {% block body %}{% endblock %}
 
     <div class="apaksa">

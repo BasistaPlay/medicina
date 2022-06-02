@@ -141,3 +141,8 @@ input[type="checkbox"] {
   cursor: pointer;
   position: fixed;
 }
+
+.menu-4 li:hover a,
+.menu-4 .current2 a {
+  transform: translateY(100%);
+}

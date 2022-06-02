@@ -10,7 +10,7 @@ body {
 
 .logo {
   height: 90%;
-  margin-top: 30px;
+  margin-top: 50px;
   margin-left: 50px;
 }
 
@@ -39,15 +39,19 @@ body {
 }
 
 .menu {
+  position: fixed;
   background-color: white;
-  height: 200px;
-  margin-top: -250px;
-  margin-left: -20px;
-  margin-right: -8px;
+  height: 150px;
+  width: 100%;
+  margin-top: -50px;
+  margin-left: -10px;
+  /* margin-right: 100px; */
+  /* position: fixed; */
+  
 }
 .menu-4 {
-  margin-top: -20px;
-  margin-left: -800px;
+  margin-top: -30px;
+  margin-left: -500px;
   margin-bottom: -90px;
   display: block;
   text-align: center;
@@ -110,7 +114,7 @@ body {
   text-decoration: none;
   margin: 20px;
   color: #fff;
-  position: relative;
+  position: fixed;
   display: inline-block;
 }
 

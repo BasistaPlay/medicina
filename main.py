@@ -234,7 +234,7 @@ def Ārsts_delete(id_arsts):
         return redirect('/slimnicas')
 
     except:
-        return 'Dzēšot slimnīcu notika kļūda!'
+        return 'Dzēšot Ārstu notika kļūda!'
 
 
 @app.route('/Ārstu/pieraksts/')
@@ -259,10 +259,10 @@ def Pieraksts_delete(id_pieraksts):
     try:
         db.session.delete(pieraksts)
         db.session.commit()
-        return redirect("/slimnicas")
+        return redirect(request.referrer)
 
     except:
-        return 'Dzēšot slimnīcu notika kļūda!'
+        return 'Dzēšot Klienu notika kļūda!'
 
 
 @app.route('/pieslegties', methods=['GET', 'POST'])

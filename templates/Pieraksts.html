@@ -1,51 +1,48 @@
-{% extends 'kopigs.html' %}
-
-{% block head %}
+{% extends 'kopigs.html' %} {% block head %}
 <style>
-    table, th, td {
-      border:1px solid black;
-      border-collapse: collapse;
-      margin-top: 100px;
-      margin-left: 700px;
-      width: 600px;
-      height: 30px;
-      background-color: rgba(224, 80, 80, 0.253);
-    }
-      .virsraksts{
-        margin-top: 100px;
-        margin-left: 800px;
-      }
-    
+  .menu {
+    margin-top: -320px;
+  }
+
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: 700px;
+    width: 600px;
+    height: 30px;
+    background-color: rgba(224, 80, 80, 0.253);
+  }
+
+  .virsraksts {
+    margin-top: 300px;
+    margin-left: 800px;
+  }
 </style>
-{% endblock %}
+{% endblock %} {% block title %} Pieraksts {% endblock %} {% block body %}
 
-{% block title %}
-Pieraksts
-{% endblock %}
 
-{% block body %}
-
+<h1 class="virsraksts">Pierakstīšanas informācija</h1>
 <table>
-    <h1 class="virsraksts">Pierakstīšanas informācija</h1>
-    <tr>
-      <th>{{ pieraksts.Pieraksts_Vards_Uzvards }}</th>
-      <th>Vizītes Nr.{{ pieraksts.Vizītes_Nr }}</th>
-    </tr>
-    <tr>
-      <th>Slimnīca</th>
-      <th>{{ slimnica.nosuakums }}</th>
-    </tr>
-    <tr>
-        <th>Vizītes laiks</th>
-        <th>{{ pieraksts.Vizītes_laiks }}</th>
-    </tr>
-    <tr>
-        <th>Ārsts</th>
-        <th>{{ Ārsti.Vards_uzvards }}</th>
-    </tr>
-    <tr>
-        <th>Darba joma</th>
-        <th>{{ Ārsti.Profesija }}</th>
-    </tr>
-  </table>
+  <tr>
+    <th>{{ pieraksts.Pieraksts_Vards_Uzvards }}</th>
+    <th>Vizītes Nr.{{ pieraksts.Vizītes_Nr }}</th>
+  </tr>
+  <tr>
+    <th>Slimnīca</th>
+    <th>{{ slimnica.nosuakums }}</th>
+  </tr>
+  <tr>
+    <th>Vizītes laiks</th>
+    <th>{{ pieraksts.Vizītes_laiks }}</th>
+  </tr>
+  <tr>
+    <th>Ārsts</th>
+    <th>{{ Ārsti.Vards_uzvards }}</th>
+  </tr>
+  <tr>
+    <th>Darba joma</th>
+    <th>{{ Ārsti.Profesija }}</th>
+  </tr>
+</table>
 {% endblock %}

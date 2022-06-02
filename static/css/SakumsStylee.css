@@ -10,26 +10,23 @@
 }
 
 .fons {
-  background-image: url("/static/img/Care_hallwaymeeting_AS132228232_hero.jpg");
   height: 820px;
-  margin-left: -50px;
   width: 1950px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: inline-block;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 body {
-  background-color: white;
+  background-image: url("/static/img/Care_hallwaymeeting_AS132228232_hero.jpg");
+  height: 820px;
+  width: 1950px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
 }
 
 .hero-section,
 .banner-section {
-  margin-top: -500px;
-  margin-left: -1000px;
+  margin-top: -850px;
+  margin-left: 300px;
   position: relative;
   display: -ms-flexbox;
   display: flex;
@@ -40,6 +37,7 @@ body {
   height: 100%;
   color: #ffffff;
   z-index: 10;
+  position: fixed;
 }
 
 .hero-section .subhead {
